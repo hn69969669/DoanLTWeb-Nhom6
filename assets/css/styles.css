@@ -25,6 +25,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .content {
     width: 1110px;
     max-width: calc(100% - 48px);
@@ -46,6 +50,7 @@ a {
 
 .btn:hover {
     opacity: 0.9;
+    background-color: rgb(147, 227, 121);
 }
 
 .line-clamp {
@@ -276,6 +281,11 @@ a {
     margin-top: 41px;
     padding: 110px 0;
     background: #f5fafe;
+}
+
+img:hover { 
+    transform: scale(1.2);
+    transition: transform 0.3s ease; 
 }
 
 .featured .sub-title {
