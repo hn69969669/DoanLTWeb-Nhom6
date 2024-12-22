@@ -6,82 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bất động sản</title>
 
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./assets/favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./assets/favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./assets/favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./assets/favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./assets/favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./assets/favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./assets/favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./assets/favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./assets/favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./assets/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
+   
+    <script>
+      function myFunction() {
+        loadScript("./components/header.html", "header");
+        loadScript("./components/footer.html", "footer");
+      }
+    </script>
+    <link href="/assets/bootstrap-5.3.3-dist/" rel="stylesheet">
+<script src="/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="manifest" href="./assets/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="./assets/favicon/ms-icon-144x144.png"
-    />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Reset CSS -->
@@ -99,8 +33,17 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!-- Add to head section -->
+
   </head>
   <body>
+    <script>
+      onload="myFunction()">
+    </script>
+    <section id="header"></section>
+    <section id="footer"></section>
+    <script src="./js/siuuu.js"></script>
     <!-- PC header -->
     <header class="fixed-header">
       <div class="content">
@@ -118,26 +61,29 @@
 
           <!-- Logo -->
           <a href="#">
-            <img class="logo" src="./assets/img/logo.svg" alt="Besnik." />
+            <img class="logo" src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="Cityland" />
           </a>
 
           <!-- Navigation -->
           <ul id="pc-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="show-on-mobile separate">
-              <a href="#!">Sign in</a>
-            </li>
-            <li class="show-on-mobile"><a href="#!">Sign up</a></li>
+            <li><a href="index.html" data-translate="home">Home</a></li>
+            <li><a href="#services" data-translate="services">Services</a></li>
+            <li><a href="#features" data-translate="features">Features</a></li>
+            <li><a href="#resources" data-translate="resources">Resources</a></li>
+            <li><a href="#subscription" data-translate="contact">Contact</a></li>
           </ul>
 
-          <!-- Action -->
-          <div class="actions">
-            <a href="#!" class="action-link">Sign in</a>
-            <a href="#!" class="btn action-btn">Sign up</a>
+          <div class="actions-right">
+            <select class="language-switch" onchange="changeLanguage(this.value)">
+              <option value="en">English</option>
+              <option value="vi">Tiếng Việt</option>
+            </select>
+            
+            <!-- Existing actions -->
+            <div class="actions">
+              <a href="#" class="action-link" data-bs-toggle="modal" data-bs-target="#signinModal" data-translate="signIn">Sign in</a>
+              <a href="#" class="btn action-btn" data-bs-toggle="modal" data-bs-target="#signupModal" data-translate="signUp">Sign up</a>
+            </div>
           </div>
         </nav>
       </div>
@@ -160,11 +106,17 @@
       <div class="menu-drawer">
         <!-- Logo -->
         <a href="#">
-          <img src="./assets/img/logo.svg" alt="Besnik." />
+          <img src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" />
         </a>
 
         <!-- Navigation -->
-        <ul id="mobile-nav"></ul>
+        <ul id="mobile-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#subscription">Contact</a></li>
+        </ul>
       </div>
     </header>
 
@@ -173,12 +125,12 @@
       <div class="hero-wrap">
         <div class="content">
           <div class="info">
-            <p class="sub-title">Welcome to CityLand</p>
-            <h1 class="title">Discover a place you'll love to live.</h1>
-            <p class="desc">
+            <p class="sub-title" data-translate="welcome">Welcome to CityLand</p>
+            <h1 class="title" data-translate="discoverPlace">Discover a place you'll love to live.</h1>
+            <p class="desc" data-translate="unlockDeals">
               Unlock exclusive real estate deals before anyone else! Discover red-hot foreclosure properties and hidden gems with just one effortless search. Stay ahead of the market and seize the best opportunities before they’re gone. Don’t just browse – find your next great deal with CityLand today!
             </p>
-            <a href="#!" class="btn hero-cta">More About Us</a>
+            <a href="./assets/about us/About us.html" class="btn hero-cta" data-translate="moreAboutUs">More About Us</a>
           </div>
 
           <img
@@ -194,7 +146,7 @@
         <div class="content">
           <div class="row">
             <!-- Logo -->
-            <img src="./assets/img/logo.svg" alt="Besnik." />
+            <img src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" />
 
             <!-- Stars -->
             <div class="stars">
@@ -206,8 +158,8 @@
             </div>
           </div>
           <div class="row row-desc">
-            <p class="desc">More than 45,000+ companies trust CityLand</p>
-            <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
+            <p class="desc" data-translate="trustText">More than 45,000+ companies trust CityLand</p>
+            <p class="desc hide-on-mobile" data-translate="ratings">5 Star Ratings (2k+ Review)</p>
           </div>
           <div class="images">
             <a href="#!">
@@ -232,8 +184,8 @@
       <!-- Guides -->
       <div id="services" class="guides">
         <div class="content">
-          <h2 class="sub-title">How its works?</h2>
-          <p class="desc">
+          <h2 class="sub-title" data-translate="howItWorks">How its works?</h2>
+          <p class="desc" data-translate="guideDesc">
             Everything you need to know when you're looking to buy, rent, or
             sell - all in one place.
           </p>
@@ -242,9 +194,9 @@
           <ul class="list-guide">
             <li class="guide-item">
               <img src="./assets/img/buyer.svg" alt="Buyer" class="icon" />
-              <h3 class="title">Buyer Guides</h3>
+              <h3 class="title" data-translate="buyerGuides">Buyer Guides</h3>
               <a href="#!" class="link">
-                <span>How to buy</span>
+                <span data-translate="howToBuy">How to buy</span>
                 <img
                   src="./assets/img/arrow-right.svg"
                   alt="Arrow right"
@@ -287,47 +239,38 @@
       <!-- Featured -->
       <div id="features" class="featured">
         <div class="content">
-          <header>
-            <h2 class="sub-title">Featured Properties</h2>
-            <div class="row">
-              <p class="desc">
-                Everything you need to know when you're looking
-              </p>
-              <a href="#!" class="link">
-                <span>View All Properties</span>
-                <img
-                  src="./assets/img/arrow-right.svg"
-                  alt="Arrow right"
-                  class="arrow"
-                />
-              </a>
+          <div class="featured-header">
+            <div class="header-left">
+              <h2 class="sub-title" data-translate="featuredProperties">Featured Properties</h2>
+              <p class="desc" data-translate="lookingDesc">Everything you need to know when you're looking</p>
             </div>
-          </header>
+            <a href="/html/featurelist.html" class="btn" data-translate="viewAll">View All</a>
+          </div>
 
           <div class="list">
             <!-- Featured item 1 -->
             <div class="item">
-              <a href="#!">
+              <a href="./html/centralparktower.html">
                 <img
-                  src="./assets/img/featured-1.jpg"
-                  alt="Nikko Apartments"
+                  src="./assets/fea-img/1a.png"
+                  alt="Central Park Tower"
                   class="thumb"
                 />
               </a>
               <div class="body">
                 <h3 class="title">
-                  <a href="#!">Nikko Apartments</a>
+                  <a href="./html/centralparktower.html">Central Park Tower</a>
                 </h3>
                 <p class="desc">852 Preston, Venty </p>
                 <div class="info">
                   <img src="./assets/img/beds.svg" alt="" class="icon" />
-                  <span class="label">20 Beds</span>
+                  <span class="label">8 Beds</span>
 
                   <img src="./assets/img/both.svg" alt="" class="icon" />
-                  <span class="label">8 both</span>
+                  <span class="label">7 both</span>
 
                   <img src="./assets/img/sqft.svg" alt="" class="icon" />
-                  <span class="label">120 Sqft</span>
+                  <span class="label">9870 Sqft</span>
                 </div>
               </div>
             </div>
@@ -336,14 +279,14 @@
             <div class="item">
               <a href="#!">
                 <img
-                  src="./assets/img/featured-2.jpg"
-                  alt="CouCou Homestead"
+                  src="./assets/fea-img/2a.png"
+                  alt="295 Krumville Road"
                   class="thumb"
                 />
               </a>
               <div class="body">
                 <h3 class="title">
-                  <a href="#!" class="line-clamp">CouCou Homestead</a>
+                  <a href="#!" class="line-clamp">295 Krumville Road</a>
                 </h3>
                 <p class="desc line-clamp" style="--line-clamp: 3">
                   523 Nichican, Maine 
@@ -365,14 +308,14 @@
             <div class="item">
               <a href="#!">
                 <img
-                  src="./assets/img/featured-3.jpg"
-                  alt="CouCou Homestead"
+                  src="./assets/fea-img/3a.png"
+                  alt="Hampshire House"
                   class="thumb"
                 />
               </a>
               <div class="body">
                 <h3 class="title">
-                  <a href="#!">Lavis 18 Residence</a>
+                  <a href="#!">Hampshire House</a>
                 </h3>
                 <p class="desc">6 Bama, Olono</p>
                 <div class="info">
@@ -380,21 +323,23 @@
                   <span class="label">2 Beds</span>
 
                   <img src="./assets/img/both.svg" alt="" class="icon" />
-                  <span class="label">2 both</span>
+                  <span class="label">2 baths</span>
 
                   <img src="./assets/img/sqft.svg" alt="" class="icon" />
-                  <span class="label">90 Sqft</span>
+                  <span class="label">990 Sqft</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="view-all show-on-mobile">
-            <a href="#!" class="btn">View All Properties</a>
+            <a href="./html/featurelist.html" class="view-all">
+              View all
+            </a>
           </div>
         </div>
       </div>
-
+            
       <!-- Stats -->
       <div id="resources" class="stats">
         <div class="content">
@@ -524,11 +469,11 @@
               <p class="qty-desc">Homes For Sale</p>
             </div>
             <div class="qty-item">
-              <strong class="qty">5,000+</strong>
+              <strong class="qty">5,000+</</strong>
               <p class="qty-desc">Homes Recently Sold</p>
             </div>
             <div class="qty-item">
-              <strong class="qty">170+</strong>
+              <strong class="qty">170+</</strong>
               <p class="qty-desc">Price Reduced</p>
             </div>
           </div>
@@ -536,15 +481,15 @@
       </div>
 
       <!-- Subscription -->
-      <div id="contact" class="subscription">
+      <div id="subscription" class="subscription">
         <div class="content">
           <div class="body">
             <div class="info">
-              <h2 class="sub-title line-clamp">Subscribe to our Newsletter!</h2>
-              <p class="desc line-clamp" style="--line-clamp: 3">
+              <h2 class="sub-title line-clamp" data-translate="subscribeNewsletter">Subscribe to our Newsletter!</h2>
+              <p class="desc line-clamp" style="--line-clamp: 3" data-translate="subscribeDesc">
                 Subscribe to our newsletter and stay updated.
               </p>
-              <a href="#!" class="btn">Subscribe</a>
+              <a href="./assets/contact/contact.html" class="btn" data-translate="subscribe">Subscribe</a>
             </div>
             <img
               src="./assets/img/newletter.svg"
@@ -556,99 +501,181 @@
       </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="content">
-        <div class="row row-top">
-          <!-- Product column -->
-          <div class="column">
-            <h3 class="heading">Product</h3>
-            <ul class="list">
-              <li class="item">
-                <a href="#!">Listing</a>
-              </li>
-              <li class="item">
-                <a href="#!">Property</a>
-              </li>
-              <li class="item">
-                <a href="#!">Agents</a>
-              </li>
-              <li class="item">
-                <a href="#!">Blog</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Resources column -->
-          <div class="column">
-            <h3 class="heading">Resources</h3>
-            <ul class="list">
-              <li class="item">
-                <a href="#!">Our Homes</a>
-              </li>
-              <li class="item">
-                <a href="#!">Member Stories</a>
-              </li>
-              <li class="item">
-                <a href="#!">Video</a>
-              </li>
-              <li class="item">
-                <a href="#!">Free trial</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Company column -->
-          <div class="column">
-            <h3 class="heading">Company</h3>
-            <ul class="list">
-              <li class="item">
-                <a href="#!">Patnerships</a>
-              </li>
-              <li class="item">
-                <a href="#!">Terms of use</a>
-              </li>
-              <li class="item">
-                <a href="#!">Privacy</a>
-              </li>
-              <li class="item">
-                <a href="#!">Sitemap</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Get in touch column -->
-          <div class="column">
-            <h3 class="heading">Get in touch</h3>
-            <p class="desc">
-              You’ll find your next home, in any style you prefer.
-            </p>
-            <div class="social">
-              <a href="#!" class="social-link">
-                <img src="./assets/img/facebook.svg" alt="" />
-              </a>
-              <a href="#!" class="social-link">
-                <img src="./assets/img/twitter.svg" alt="" />
-              </a>
-              <a href="#!" class="social-link">
-                <img src="./assets/img/linkedin.svg" alt="" />
-              </a>
+    <footer>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="content">
+          <div class="row row-top">
+            <!-- Product column -->
+            <div class="column">
+              <h3 class="heading">Product</h3>
+              <ul class="list">
+                <li class="item">
+                  <a href="#!">Listing</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Property</a>
+                </li>
+              </ul>
+            </div>
+    
+            <!-- Resources column -->
+            <div class="column">
+              <h3 class="heading">Resources</h3>
+              <ul class="list">
+                <li class="item">
+                  <a href="#!">Our Homes</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Member Stories</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Video</a>
+                </li>
+              </ul>
+            </div>
+    
+            <!-- Company column -->
+            <div class="column">
+              <h3 class="heading">Company</h3>
+              <ul class="list">
+                <li class="item">
+                  <a href="#!">Terms of use</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Privacy</a>
+                </li>
+              </ul>
+            </div>
+    
+            <!-- Get in touch column -->
+            <div class="column">
+              <h3 class="heading">Get in touch</h3>
+              <p class="desc">
+                You’ll find your next home, in any style you prefer.
+              </p>
+              <div class="social">
+                <a href="#!" class="social-link">
+                  <img src="../assets/img/facebook.svg" alt="" />
+                <a href="#!" class="social-link">
+                  <img src="../assets/img/twitter.svg" alt="" />
+                </a>
+                <a href="#!" class="social-link">
+                  <img src="../assets/img/linkedin.svg" alt="" />
+                </a>
+              </div>
             </div>
           </div>
+          <div class="row row-bottom">
+            <img src="../assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" class="logo" />
+            <p class="copyright">Copyright 2024., All rights reserved.</p>
+          </div>
         </div>
-        <div class="row row-bottom">
-          <img src="./assets/img/logo.svg" alt="Besnik." class="logo" />
-          <p class="copyright">Copyright 2020.com, All rights reserved.</p>
+      </footer>
+
+    <!-- Sign In Modal -->
+    <div class="modal-overlay" id="signinOverlay">
+        <div class="auth-modal" id="signinModal">
+            <button class="close-btn" onclick="closeModal('signin')">&times;</button>
+            <h2 data-translate="signIn">Sign In</h2>
+            <form class="auth-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember" data-translate="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="auth-btn" data-translate="signIn">Sign In</button>
+            </form>
         </div>
-      </div>
-    </footer>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal-overlay" id="signupOverlay">
+        <div class="auth-modal" id="signupModal">
+            <button class="close-btn" onclick="closeModal('signup')">&times;</button>
+            <h2 data-translate="signUp">Sign Up</h2>
+            <form class="auth-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <div class="remember-me">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree" data-translate="agreeToS">I agree to the Terms of Service</label>
+                </div>
+                <button type="submit" class="auth-btn" data-translate="signUp">Sign Up</button>
+            </form>
+        </div>
+    </div>
 
     <script>
-      const pcNav = document.querySelector("#pc-nav");
-      const mobileNav = document.querySelector("#mobile-nav");
+      async function loadTranslations() {
+  try {
+    const response = await fetch('./assets/translations/translations.json');
+    if (!response.ok) throw new Error('Failed to load translations');
+    return await response.json();
+  } catch (error) {
+    console.error('Error loading translations:', error);
+    return null;
+  }
+}
 
-      // Copy from PC nav -> Mobile nav
-      mobileNav.innerHTML = pcNav.innerHTML;
+async function changeLanguage(lang) {
+  const translations = await loadTranslations();
+  if (!translations || !translations[lang]) return;
+
+  // Lưu ngôn ngữ đã chọn
+  localStorage.setItem('language', lang);
+
+  // Tìm tất cả các phần tử có `data-translate`
+  const elements = document.querySelectorAll('[data-translate]');
+  
+  elements.forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if (translations[lang][key]) {
+      // Nếu là placeholder
+      if (element.placeholder) {
+        element.placeholder = translations[lang][key];
+      } else {
+        element.textContent = translations[lang][key];
+      }
+    }
+  });
+
+  console.log(`Language changed to: ${lang}`);
+}
+
+// Áp dụng ngôn ngữ khi tải trang
+document.addEventListener('DOMContentLoaded', async () => {
+  const savedLang = localStorage.getItem('language') || 'en';
+  document.querySelector('.language-switch').value = savedLang;
+  await changeLanguage(savedLang);
+});
+
+function openModal(type) {
+    document.getElementById(type + 'Modal').classList.add('active');
+    document.getElementById(type + 'Overlay').classList.add('active');
+}
+
+function closeModal(type) {
+    document.getElementById(type + 'Modal').classList.remove('active');
+    document.getElementById(type + 'Overlay').classList.remove('active');
+}
+
+// Update click handlers
+document.querySelector('[data-bs-target="#signinModal"]').onclick = () => openModal('signin');
+document.querySelector('[data-bs-target="#signupModal"]').onclick = () => openModal('signup');
+
+// Close modal when clicking overlay
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeModal(overlay.id.replace('Overlay', ''));
+        }
+    });
+});
     </script>
+
   </body>
 </html>

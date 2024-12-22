@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bất động sản</title>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/favicon/apple-icon-114x114.png"
+    />
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik One:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata:wght@400&display=swap" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+
+    <!-- Embed fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <style>
+        .filter-btn {
+            font-size: 14px;
+            padding: 4px 12px;
+            background-color: #f8f9fa;
+            color: #212529;
+            border: 1px solid #dee2e6;
+        }
+        .filter-btn:hover {
+            background-color: #e9ecef;
+            border-color: #dee2e6;
+        }
+        .selected-filters {
+            display: none;
+            margin-bottom: 15px;
+            padding: 8px 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .selected-filters.show {
+            display: block;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c68f6;
+            margin: 10px 0;
+        }
+        .property-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .property-info {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .info-item img {
+            width: 20px;
+            height: 20px;
+        }
+        .info-item span {
+            color: #4D4D4D;
+            font-size: 14px;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .price {
+            margin-top: auto;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            margin: 0;
+            font-size: 16px;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .dropdown-menu {
+            min-width: 200px;
+            padding: 10px 0;
+        }
+        .dropdown-item {
+            padding: 8px 20px;
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        .btn-clear-filter {
+            font-size: 12px;
+            padding: 0 4px;
+            line-height: 1;
+            margin-left: 8px;
+        }
+        .filter-section {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        #selectedFilters {
+            font-size: 14px;
+            padding: 6px 12px;
+        }
+        .actions-right {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode .card {
+            background-color: #444;
+            border-color: #555;
+        }
+        .dark-mode .card-title,
+        .dark-mode .card-text {
+            color: #fff;
+        }
+        .dark-mode .price {
+            background-color: #2c68f6;
+            color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- PC header -->
+    <header class="fixed-header">
+      <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar">
+          <!-- Tablet/mobile menu -->
+          <label for="menu-checkbox" class="toggle-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
+
+          <!-- Logo -->
+          <a href="index.html"> <!-- Add link to home page -->
+            <img class="logo" src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="Cityland" />
+          </a>
+
+          <!-- Navigation -->
+          <ul id="pc-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="show-on-mobile separate">
+              <a href="#!">Sign in</a>
+            </li>
+            <li class="show-on-mobile"><a href="#!">Sign up</a></li>
+          </ul>
+
+          <!-- Action -->
+          <div class="actions">
+            <a href="#!" class="action-link">Sign in</a>
+            <a href="#!" class="btn action-btn">Sign up</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Tablet/mobile header -->
+    <header class="mobile-header">
+      <input
+        type="checkbox"
+        name=""
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+
+      <!-- Overlay -->
+      <label for="menu-checkbox" class="menu-overlay"></label>
+
+      <!-- Menu content -->
+      <div class="menu-drawer">
+        <!-- Logo -->
+        <a href="index.html">
+          <img src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" />
+        </a>
+
+        <!-- Navigation -->
+        <ul id="mobile-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#resources">Resources</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        
+        <div class="actions-right">
+          <select class="language-switch" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+          </select>
+          
+          <!-- Existing actions -->
+          <div class="actions">
+            <a href="#!" class="action-link" data-translate="signIn">Sign in</a>
+            <a href="#!" class="btn action-btn" data-translate="signUp">Sign up</a>
+          </div>
+        </div>
+        
+      </div>
+    </header>
+    
+    <div class="container mt-5">
+        <!-- Add breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Featured Properties</li>
+            </ol>
+        </nav>
+
+        <!-- Add filter dropdown -->
+        <div class="filter-section">
+            <div id="selectedFilters" class="selected-filters">
+                Selected: <span id="activeFilter"></span>
+                <button class="btn btn-sm btn-clear-filter" onclick="clearFilter()">×</button>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-sm filter-btn dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filter
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="filterDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="applyFilter('New listing')">New listing</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="applyFilter('Price: High-Low')">Price: High-Low</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="applyFilter('Price: Low-High')">Price: Low-High</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Update property cards with unique content -->
+        <div class="row mb-4" id="propertyContainer">
+            <div class="col-md-4">
+                <div class="card h-100" data-price="150000000">
+                    <div class="price">$150,000,000</div>
+                    <a href="./centralparktower.html">
+                      <img src="../assets/fea-img/1a.png" class="card-img-top" alt="Property">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title"><a href="./centralparktower.html">Central Park Tower</a></h4>
+                        <p class="card-text">852 Preston, Venty</p>
+                        <div class="property-info">
+                            <div class="info-item">
+                                <img src="../assets/img/beds.svg" alt="beds">
+                                <span>8 Beds</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/both.svg" alt="baths">
+                                <span>7 Baths</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/sqft.svg" alt="sqft">
+                                <span>9,870 Sqft</span>
+                            </div>
+                        </div>
+                        <a href="/html/centralparktower.html" class="btn btn-primary mt-3">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" data-price="16895000">
+                    <div class="price">$16,895,000</div>
+                    <img src="../assets/fea-img/2a.png" class="card-img-top" alt="Property">
+                    <div class="card-body">
+                        <h4 class="card-title">295 Krumville Road</h4>
+                        <p class="card-text">523 Nichican, Maine</p>
+                        <div class="property-info">
+                            <div class="info-item">
+                                <img src="../assets/img/beds.svg" alt="beds">
+                                <span>6 Beds</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/both.svg" alt="baths">
+                                <span>3 Baths</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/sqft.svg" alt="sqft">
+                                <span>2,000 Sqft</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" data-price="4750000">
+                    <div class="price">$4,750,000</div>
+                    <img src="../assets/fea-img/3a.png" class="card-img-top" alt="Property">
+                    <div class="card-body">
+                        <h4 class="card-title">Hampshire House</h4>
+                        <p class="card-text">6 Bama, Olono</p>
+                        <div class="property-info">
+                            <div class="info-item">
+                                <img src="../assets/img/beds.svg" alt="beds">
+                                <span>4 Beds</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/both.svg" alt="baths">
+                                <span>2 Baths</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/sqft.svg" alt="sqft">
+                                <span>1,500 Sqft</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" data-price="3695000">
+                    <div class="price">$3,695,000</div>
+                    <img src="../assets/fea-img/4a.png" class="card-img-top" alt="Property">
+                    <div class="card-body">
+                        <h4 class="card-title">Hampshire House</h4>
+                        <p class="card-text">852 Preston, Venty</p>
+                        <div class="property-info">
+                            <div class="info-item">
+                                <img src="../assets/img/beds.svg" alt="beds">
+                                <span>3 Beds</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/both.svg" alt="baths">
+                                <span>2 Baths</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/sqft.svg" alt="sqft">
+                                <span>1,200 Sqft</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" data-price="2675000">
+                    <div class="price">$2,675,000</div>
+                    <img src="../assets/fea-img/5a.png" class="card-img-top" alt="Property">
+                    <div class="card-body">
+                        <h4 class="card-title">118 NORFOLK DR</h4>
+                        <p class="card-text">7 Chigan, Fragent</p>
+                        <div class="property-info">
+                            <div class="info-item">
+                                <img src="../assets/img/beds.svg" alt="beds">
+                                <span>5 Beds</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/both.svg" alt="baths">
+                                <span>4 Baths</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="..assets/img/sqft.svg" alt="sqft">
+                                <span>3,000 Sqft</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" data-price="63815000">
+                    <div class="price">$63,815,000</div>
+                    <img src="../assets/fea-img/6a.png" class="card-img-top" alt="Property">
+                    <div class="card-body">
+                        <h4 class="card-title">Hampshire House</h4>
+                        <p class="card-text">6 Bama, Olono</p>
+                        <div class="property-info">
+                            <div class="info-item">
+                                <img src="../assets/img/beds.svg" alt="beds">
+                                <span>10 Beds</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="../assets/img/both.svg" alt="baths">
+                                <span>8 Baths</span>
+                            </div>
+                            <div class="info-item">
+                                <img src=../assets/img/sqft.svg" alt="sqft">
+                                <span>12,000 Sqft</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add pagination after the card rows -->
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content">
+          <div class="row row-top">
+            <!-- Product column -->
+            <div class="column">
+              <h3 class="heading">Product</h3>
+              <ul class="list">
+                <li class="item">
+                  <a href="#!">Listing</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Property</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Agents</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Blog</a>
+                </li>
+              </ul>
+            </div>
+  
+            <!-- Resources column -->
+            <div class="column">
+              <h3 class="heading">Resources</h3>
+              <ul class="list">
+                <li class="item">
+                  <a href="#!">Our Homes</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Member Stories</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Video</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Free trial</a>
+                </li>
+              </ul>
+            </div>
+  
+            <!-- Company column -->
+            <div class="column">
+              <h3 class="heading">Company</h3>
+              <ul class="list">
+                <li class="item">
+                  <a href="#!">Patnerships</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Terms of use</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Privacy</a>
+                </li>
+                <li class="item">
+                  <a href="#!">Sitemap</a>
+                </li>
+              </ul>
+            </div>
+  
+            <!-- Get in touch column -->
+            <div class="column">
+              <h3 class="heading">Get in touch</h3>
+              <p class="desc">
+                You’ll find your next home, in any style you prefer.
+              </p>
+              <div class="social">
+                <a href="#!" class="social-link">
+                  <img src="../assets/img/facebook.svg" alt="" />
+                </a>
+                <a href="#!" class="social-link">
+                  <img src="../assets/img/twitter.svg" alt="" />
+                </a>
+                <a href="#!" class="social-link">
+                  <img src="..assets/img/linkedin.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row row-bottom">
+            <img src="../assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="Cityland" class="logo" />
+            <p class="copyright">Copyright 2020., All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+  
+      <script>
+        function initializeProperties() {
+            const propertyCards = document.querySelectorAll('#propertyContainer .card');
+            const properties = Array.from(propertyCards).map(card => {
+                const priceText = card.querySelector('.price').textContent;
+                const price = parseInt(priceText.replace(/\$|,/g, ''));
+                const title = card.querySelector('.card-title').textContent;
+                const location = card.querySelector('.card-text').textContent;
+                const image = card.querySelector('img').src;
+                
+                return {
+                    element: card.parentElement,
+                    price: price,
+                    title: title,
+                    location: location,
+                    image: image
+                };
+            });
+            return properties;
+        }
+
+        function applyFilter(filterName) {
+            const properties = initializeProperties();
+            document.getElementById('activeFilter').textContent = filterName;
+            document.getElementById('selectedFilters').classList.add('show');
+            
+            const container = document.getElementById('propertyContainer');
+            const sortedProperties = [...properties];
+            
+            if (filterName === 'Price: High-Low') {
+                sortedProperties.sort((a, b) => b.price - a.price);
+            } else if (filterName === 'Price: Low-High') {
+                sortedProperties.sort((a, b) => a.price - b.price);
+            }
+            
+            // Reorder elements
+            sortedProperties.forEach(prop => {
+                container.appendChild(prop.element);
+            });
+        }
+
+        function clearFilter() {
+            document.getElementById('activeFilter').textContent = '';
+            document.getElementById('selectedFilters').classList.remove('show');
+            // Reset to original order if needed
+            location.reload();
+        }
+
+        // Initial render
+        renderProperties(properties);
+
+        // Handle pagination clicks
+        document.querySelectorAll('.pagination .page-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.pagination .page-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                if (e.target.parentElement.classList.contains('page-item')) {
+                    e.target.parentElement.classList.add('active');
+                }
+            });
+        });
+
+
+      </script>
+
+
+  
+    </body>
+  </html>
