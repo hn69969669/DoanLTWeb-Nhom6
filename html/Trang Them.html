@@ -18,17 +18,17 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
-    <script>
-      function myFunction() {
-        loadScript("/components/header.html", "header");
-        loadScript("/components/footer.html", "footer");
-      }
-    </script>
   </head>
   <body onload="myFunction()">
     <section id="header"></section>
     <section id="footer"></section>
 
+    <script>
+      function myFunction() {
+        loadScript("../components/header.html", "header");
+        loadScript("../components/footer.html", "footer");
+      }
+    </script>
     <script>
       const pcNav = document.querySelector("#pc-nav");
       const mobileNav = document.querySelector("#mobile-nav");

@@ -5,7 +5,8 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="../assets/css/chinhsach.css" />
   </head>
-  <body>
+  <body onload="myFunction()">
+    <section id="header"></section>
     <div class="policies">
       <div class="policies-title">POLICIES</div>
       <div class="policies-content">
@@ -225,6 +226,13 @@
         </div>
       </section>
     </div>
+    <section id="footer"></section>
     <script src="/js/chinhsach.js"></script>
+    <script>
+      function myFunction() {
+        loadScript("../components/header.html", "header");
+        loadScript("../components/footer.html", "footer");
+      }
+    </script>
   </body>
 </html>
