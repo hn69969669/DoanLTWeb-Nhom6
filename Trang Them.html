@@ -4,7 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bất động sản</title>
+    <title>Trang them</title>
+    <!-- Favicon -->
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./assets/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="./assets/favicon/favicon-96x96.png"
+  />
+  <link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="./assets/favicon/favicon-192x192.png"
+/>
     <!-- Reset CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <!-- Embed fonts -->
@@ -18,17 +38,17 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <script>
+      function myFunction() {
+        loadScript("/components/header.html", "header");
+        loadScript("/components/footer.html", "footer");
+      }
+    </script>
   </head>
   <body onload="myFunction()">
     <section id="header"></section>
     <section id="footer"></section>
 
-    <script>
-      function myFunction() {
-        loadScript("../components/header.html", "header");
-        loadScript("../components/footer.html", "footer");
-      }
-    </script>
     <script>
       const pcNav = document.querySelector("#pc-nav");
       const mobileNav = document.querySelector("#mobile-nav");
@@ -36,6 +56,6 @@
       // Copy from PC nav -> Mobile nav
       mobileNav.innerHTML = pcNav.innerHTML;
     </script>
-    <script src="/js/siuuu.js"></script>
+    <script src="/DoanLTWeb-Nhom6-master/js/LoadComponent.js"></script>
   </body>
 </html>

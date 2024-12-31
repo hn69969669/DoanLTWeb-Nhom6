@@ -4,33 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bất động sản</title>
-    <meta name="theme-color" content="#ffffff" />
-    <!-- Favicon -->
-    <link rel="manifest" href="./assets/favicon/manifest.json" />
-    
-    <!-- Bootstrap -->
+    <title>CityLand</title>
+
     <link href="/assets/bootstrap-5.3.3-dist/" rel="stylesheet">
 <script src="/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<!-- Favicon -->
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./assets/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="./assets/favicon/favicon-96x96.png"
+  />
+  <link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="./assets/favicon/favicon-192x192.png"
+/>
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Reset CSS -->
-    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="/DoanLTWeb-Nhom6-master/assets/css/reset.css" />
 
     <!-- Embed fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
-      rel="stylesheet"/>
-    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/DoanLTWeb-Nhom6-master/assets/fonts/stylesheet.css" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
-   
-  </head>
-  <body>
+    <link rel="stylesheet" href="/DoanLTWeb-Nhom6-master/assets/css/styles.css" />
+    <link rel="stylesheet" href="/DoanLTWeb-Nhom6-master/assets/css/responsive.css" />
 
+    <!-- Add to head section -->
+
+  </head>
+  <header>
     <!-- PC header -->
     <header class="fixed-header">
       <div class="content">
@@ -45,31 +64,59 @@
               />
             </svg>
           </label>
-
+  
           <!-- Logo -->
           <a href="#">
-            <img class="logo" src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="Cityland" />
+            <img
+              class="logo"
+              src="/DoanLTWeb-Nhom6-master/assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png"
+              alt="Cityland"
+            />
           </a>
-
+  
           <!-- Navigation -->
           <ul id="pc-nav">
-            <li><a href="index.html" data-translate="home">Home</a></li>
+            <li>
+              <a href="/DoanLTWeb-Nhom6-master/Index.html" data-translate="home"
+                >Home</a
+              >
+            </li>
             <li><a href="#services" data-translate="services">Services</a></li>
             <li><a href="#features" data-translate="features">Features</a></li>
             <li><a href="#resources" data-translate="resources">Resources</a></li>
             <li><a href="#subscription" data-translate="contact">Contact</a></li>
           </ul>
-            
+  
+          <div class="actions-right">
+            <select class="language-switch" onchange="changeLanguage(this.value)">
+              <option value="en">English</option>
+              <option value="vi">Tiếng Việt</option>
+            </select>
+  
             <!-- Existing actions -->
             <div class="actions">
-              <a href="#" class="action-link" data-bs-toggle="modal" data-bs-target="#signinModal" data-translate="signIn">Sign in</a>
-              <a href="#" class="btn action-btn" data-bs-toggle="modal" data-bs-target="#signupModal" data-translate="signUp">Sign up</a>
+              <a
+                href="#"
+                class="action-link"
+                data-bs-toggle="modal"
+                data-bs-target="#signinModal"
+                data-translate="signIn"
+                >Sign in</a
+              >
+              <a
+                href="#"
+                class="btn action-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#signupModal"
+                data-translate="signUp"
+                >Sign up</a
+              >
             </div>
           </div>
         </nav>
       </div>
     </header>
-
+  
     <!-- Tablet/mobile header -->
     <header class="mobile-header">
       <input
@@ -79,17 +126,20 @@
         class="menu-checkbox"
         hidden
       />
-
+  
       <!-- Overlay -->
       <label for="menu-checkbox" class="menu-overlay"></label>
-
+  
       <!-- Menu content -->
       <div class="menu-drawer">
         <!-- Logo -->
         <a href="#">
-          <img src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" />
+          <img
+            src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png"
+            alt="CityLand"
+          />
         </a>
-
+  
         <!-- Navigation -->
         <ul id="mobile-nav">
           <li><a href="index.html">Home</a></li>
@@ -100,6 +150,9 @@
         </ul>
       </div>
     </header>
+  </header>
+  
+
 
     <main>
       <!-- Hero -->
@@ -111,11 +164,11 @@
             <p class="desc" data-translate="unlockDeals">
               Unlock exclusive real estate deals before anyone else! Discover red-hot foreclosure properties and hidden gems with just one effortless search. Stay ahead of the market and seize the best opportunities before they’re gone. Don’t just browse – find your next great deal with CityLand today!
             </p>
-            <a href="./assets/about us/About us.html" class="btn hero-cta" data-translate="moreAboutUs">More About Us</a>
+            <a href="/DoanLTWeb-Nhom6-master/About us.html" class="btn hero-cta" data-translate="moreAboutUs">More About Us</a>
           </div>
 
           <img
-            src="./assets/img/hero-img.svg"
+            src="/DoanLTWeb-Nhom6-master/assets/img/hero-img.svg"
             alt="Discover a place you'll love to live."
             class="hero-img"
           />
@@ -127,15 +180,15 @@
         <div class="content">
           <div class="row">
             <!-- Logo -->
-            <img src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" />
+            <img src="/DoanLTWeb-Nhom6-master/assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" />
 
             <!-- Stars -->
             <div class="stars">
-              <img src="./assets/img/star.svg" alt="Star" />
-              <img src="./assets/img/star.svg" alt="Star" />
-              <img src="./assets/img/star.svg" alt="Star" />
-              <img src="./assets/img/star.svg" alt="Star" />
-              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/star.svg" alt="Star" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/star.svg" alt="Star" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/star.svg" alt="Star" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/star.svg" alt="Star" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/star.svg" alt="Star" />
             </div>
           </div>
           <div class="row row-desc">
@@ -144,19 +197,19 @@
           </div>
           <div class="images">
             <a href="#!">
-              <img src="./assets/img/client-1.svg" alt="Client 1" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/client-1.svg" alt="Client 1" />
             </a>
             <a href="#!">
-              <img src="./assets/img/client-2.svg" alt="Client 2" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/client-2.svg" alt="Client 2" />
             </a>
             <a href="#!">
-              <img src="./assets/img/client-3.svg" alt="Client 3" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/client-3.svg" alt="Client 3" />
             </a>
             <a href="#!">
-              <img src="./assets/img/client-4.svg" alt="Client 4" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/client-4.svg" alt="Client 4" />
             </a>
             <a href="#!">
-              <img src="./assets/img/client-5.svg" alt="Client 5" />
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/client-5.svg" alt="Client 5" />
             </a>
           </div>
         </div>
@@ -165,7 +218,7 @@
       <!-- Guides -->
       <div id="services" class="guides">
         <div class="content">
-          <h2 class="sub-title" data-translate="howItWorks">How its works?</h2>
+          <h2 class="sub-title" data-translate="howItWorks">How it works?</h2>
           <p class="desc" data-translate="guideDesc">
             Everything you need to know when you're looking to buy, rent, or
             sell - all in one place.
@@ -187,9 +240,9 @@
             </li>
             <li class="guide-item">
               <img src="./assets/img/renter.svg" alt="Renter" class="icon" />
-              <h3 class="title">Renter Guides</h3>
+              <h3 class="title" data-translate="rentGuides">Renter Guides</h3>
               <a href="#!" class="link">
-                <span>How to rent</span>
+                <span data-translate="howToRent">How to rent</span>
                 <img
                   src="./assets/img/arrow-right.svg"
                   alt="Arrow right"
@@ -199,9 +252,9 @@
             </li>
             <li class="guide-item">
               <img src="./assets/img/seller.svg" alt="Seller" class="icon" />
-              <h3 class="title">Seller Guides</h3>
+              <h3 class="title" data-translate="sellGuides">Seller Guides</h3>
               <a href="#!" class="link">
-                <span>How to sell</span>
+                <span data-translate="howToSell">How to sell</span>
                 <img
                   src="./assets/img/arrow-right.svg"
                   alt="Arrow right"
@@ -212,7 +265,7 @@
           </ul>
 
           <div class="guide-cta">
-            <a href="#!" class="btn">Sell Full Guidelines</a>
+            <a href="/DoanLTWeb-Nhom6-master/Policies.html" class="btn" data-translate="fullguides">Sell Full Guidelines</a>
           </div>
         </div>
       </div>
@@ -225,13 +278,13 @@
               <h2 class="sub-title" data-translate="featuredProperties">Featured Properties</h2>
               <p class="desc" data-translate="lookingDesc">Everything you need to know when you're looking</p>
             </div>
-            <a href="/html/featurelist.html" class="btn" data-translate="viewAll">View All</a>
+            <a href="/DoanLTWeb-Nhom6-master/Featurelist.html" class="btn" data-translate="viewAll">View All</a>
           </div>
 
           <div class="list">
             <!-- Featured item 1 -->
             <div class="item">
-              <a href="./html/centralparktower.html">
+              <a href="/DoanLTWeb-Nhom6-master/Centralparktower.html">
                 <img
                   src="./assets/fea-img/1a.png"
                   alt="Central Park Tower"
@@ -314,7 +367,7 @@
           </div>
 
           <div class="view-all show-on-mobile">
-            <a href="./html/featurelist.html" class="view-all">
+            <a href="/DoanLTWeb-Nhom6-master/Featurelist.html" class="view-all" data-translate="viewAll">
               View all
             </a>
           </div>
@@ -342,7 +395,7 @@
                     class="icon"
                   />
                 </div>
-                <p class="desc">
+                <p class="desc" data-translate="avarage">
                   By avarage for 2 bedroom apments in San Francisco, CA
                 </p>
                 <div class="separate"></div>
@@ -436,8 +489,8 @@
               </div>
             </div>
             <div class="info">
-              <h2 class="sub-title">You’ve found a neighborhood you love.</h2>
-              <p class="desc">
+              <h2 class="sub-title" data-translate="neighborhood">You’ve found a neighborhood you love.</h2>
+              <p class="desc" data-translate="own-home">
                 When you own a home, you’re committing to living in one location
                 for a while. In a recent Trulia survey, we found that five out
                 of six respondents said finding the right neighborhood
@@ -447,15 +500,15 @@
           <div class="row row-qty">
             <div class="qty-item">
               <strong class="qty">2,500</strong>
-              <p class="qty-desc">Homes For Sale</p>
+              <p class="qty-desc" data-translate="num-sale">Homes For Sale</p>
             </div>
             <div class="qty-item">
-              <strong class="qty">5,000+</</strong>
-              <p class="qty-desc">Homes Recently Sold</p>
+              <strong class="qty">5,000+</strong>
+              <p class="qty-desc" data-translate="num-sold">Homes Recently Sold</p>
             </div>
             <div class="qty-item">
               <strong class="qty">170+</strong>
-              <p class="qty-desc">Price Reduced</p>
+              <p class="qty-desc" data-translate="price">Price Reduced</p>
             </div>
           </div>
         </div>
@@ -470,7 +523,7 @@
               <p class="desc line-clamp" style="--line-clamp: 3" data-translate="subscribeDesc">
                 Subscribe to our newsletter and stay updated.
               </p>
-              <a href="./assets/contact/contact.html" class="btn" data-translate="subscribe">Subscribe</a>
+              <a href="/DoanLTWeb-Nhom6-master/Contact.html" class="btn" data-translate="subscribe">Subscribe</a>
             </div>
             <img
               src="./assets/img/newletter.svg"
@@ -482,7 +535,79 @@
       </div>
     </main>
 
-    <section id="footer"></section>
+    <footer>
+      <footer>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="content">
+            <div class="row row-top">
+              <!-- Product column -->
+              <div class="column">
+                <h3 class="heading" data-translate="product">Product</h3>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#!" data-translate="listing">Listing</a>
+                  </li>
+                  <li class="item">
+                    <a href="#!" data-translate="property">Property</a>
+                  </li>
+                </ul>
+              </div>
+      
+              <!-- Resources column -->
+              <div class="column">
+                <h3 class="heading" data-translate="resources">Resources</h3>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#!" data-translate="ourHomes">Our Homes</a>
+                  </li>
+                  <li class="item">
+                    <a href="#!" data-translate="memberStories">Member Stories</a>
+                  </li>
+                  <li class="item">
+                    <a href="#!" data-translate="video">Video</a>
+                  </li>
+                </ul>
+              </div>
+      
+              <!-- Company column -->
+              <div class="column">
+                <h3 class="heading" data-translate="company">Company</h3>
+                <ul class="list">
+                  <li class="item">
+                    <a href="#!" data-translate="termsOfUse">Terms of use</a>
+                  </li>
+                  <li class="item">
+                    <a href="#!" data-translate="privacy">Privacy</a>
+                  </li>
+                </ul>
+              </div>
+      
+              <!-- Get in touch column -->
+              <div class="column">
+                <h3 class="heading" data-translate="getInTouch">Get in touch</h3>
+                <p class="desc" data-translate="nextHome">
+                  You’ll find your next home, in any style you prefer.
+                </p>
+                <div class="social">
+                  <a href="#!" class="social-link">
+                    <img src="/DoanLTWeb-Nhom6-master/assets/img/facebook.svg" alt="" />
+                  <a href="#!" class="social-link">
+                    <img src="/DoanLTWeb-Nhom6-master/assets/img/twitter.svg" alt="" />
+                  </a>
+                  <a href="#!" class="social-link">
+                    <img src="/DoanLTWeb-Nhom6-master/assets/img/linkedin.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row row-bottom">
+              <img src="/DoanLTWeb-Nhom6-master/assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" class="logo" />
+              <p class="copyright" data-translate="copyright" >Copyright 2024., All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+    </footer>
 
     <!-- Sign In Modal -->
     <div class="modal-overlay" id="signinOverlay">
@@ -519,8 +644,34 @@
             </form>
         </div>
     </div>
+    <script src="/DoanLTWeb-Nhom6-master/js/Lang.js"></script>
+    <script src="/DoanLTWeb-Nhom6-master/js/LoadComponent.js"></script>
+    <script>
 
-<script src="./js/signin+signup.js"></script>
+
+      function openModal(type) {
+          document.getElementById(type + 'Modal').classList.add('active');
+          document.getElementById(type + 'Overlay').classList.add('active');
+      }
+      
+      function closeModal(type) {
+          document.getElementById(type + 'Modal').classList.remove('active');
+          document.getElementById(type + 'Overlay').classList.remove('active');
+      }
+      
+      // Update click handlers
+      document.querySelector('[data-bs-target="#signinModal"]').onclick = () => openModal('signin');
+      document.querySelector('[data-bs-target="#signupModal"]').onclick = () => openModal('signup');
+      
+      // Close modal when clicking overlay
+      document.querySelectorAll('.modal-overlay').forEach(overlay => {
+          overlay.addEventListener('click', (e) => {
+              if (e.target === overlay) {
+                  closeModal(overlay.id.replace('Overlay', ''));
+              }
+          });
+      });
+          </script>
 
   </body>
 </html>

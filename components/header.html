@@ -1,198 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estate</title>
-    <meta name="theme-color" content="#ffffff" />
+<header>
+  <!-- PC header -->
+  <header class="fixed-header">
+    <div class="content">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <!-- Tablet/mobile menu -->
+        <label for="menu-checkbox" class="toggle-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              fill="currentColor"
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </label>
 
-   
+        <!-- Logo -->
+        <a href="#">
+          <img
+            class="logo"
+            src="/DoanLTWeb-Nhom6-master/assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png"
+            alt="Cityland"
+          />
+        </a>
 
-    <!-- Favicon -->
-    <link rel="manifest" href="../assets/favicon/manifest.json" />
-    
-    <!-- Bootstrap -->
-    <link href="/assets/bootstrap-5.3.3-dist/" rel="stylesheet">
-<script src="/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Navigation -->
+        <ul id="pc-nav">
+          <li>
+            <a href="/DoanLTWeb-Nhom6-master/Index.html" data-translate="home"
+              >Home</a
+            >
+          </li>
+          <li><a href="#services" data-translate="services">Services</a></li>
+          <li><a href="#features" data-translate="features">Features</a></li>
+          <li><a href="#resources" data-translate="resources">Resources</a></li>
+          <li><a href="#subscription" data-translate="contact">Contact</a></li>
+        </ul>
 
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="../assets/css/reset.css" />
+        <div class="actions-right">
+          <select class="language-switch" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+          </select>
 
-    <!-- Embed fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
-      rel="stylesheet"/>
-    <link rel="stylesheet" href="../assets/fonts/stylesheet.css" />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/responsive.css" />
-
-
-    <script src="/js/signin+signup.js"></script>
-
-</head>
-<body>
-     
-    <!-- PC header -->
-    <header class="fixed-header">
-        <div class="content">
-          <!-- Navbar -->
-          <nav class="navbar">
-            <!-- Tablet/mobile menu -->
-            <label for="menu-checkbox" class="toggle-menu">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path
-                  fill="currentColor"
-                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-                />
-              </svg>
-            </label>
-  
-            <!-- Logo -->
-            <a href="#">
-              <img class="logo" src="/assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="Cityland" />
-            </a>
-  
-            <!-- Navigation -->
-            <ul id="pc-nav">
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/index.html#services">Services</a></li>
-              <li><a href="/index.html#features">Features</a></li>
-              <li><a href="/index.html#resources">Resources</a></li>
-              <li><a href="/index.html#contact">Contact</a></li>
-            </ul>
-            
-              <style>
-                .language-switcher {
-                  
-                  display: flex;
-                  gap: 10px;
-                }
-                .language-btn {
-                  margin-right: 0px;
-                  padding: 5px 10px ;
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;
-                }
-
-                .inactive {
-                  background-color: #dd090907;
-                  color: black;
-                }
-              </style>
-            
-            
-              <div class="language-switcher">
-                <button class="language-btn" onclick="switchLanguage('en')" id="enBtn">EN</button>
-                <button class="language-btn" onclick="switchLanguage('vi')" id="viBtn">VI</button>
-              </div>
-
-              
-              <!-- Existing actions -->
-              <div class="actions">
-                <a href="#" class="action-link" data-bs-toggle="modal" data-bs-target="#signinModal" data-translate="signIn">Sign in</a>
-                <a href="#" class="btn action-btn" data-bs-toggle="modal" data-bs-target="#signupModal" data-translate="signUp">Sign up</a>
-              </div>
-            </div>
-          </nav>
+          <!-- Existing actions -->
+          <div class="actions">
+            <a
+              href="#"
+              class="action-link"
+              data-bs-toggle="modal"
+              data-bs-target="#signinModal"
+              data-translate="signIn"
+              >Sign in</a
+            >
+            <a
+              href="#"
+              class="btn action-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+              data-translate="signUp"
+              >Sign up</a
+            >
+          </div>
         </div>
-      </header>
-  
-      <!-- Tablet/mobile header -->
-      <header class="mobile-header">
-        <input
-          type="checkbox"
-          name=""
-          id="menu-checkbox"
-          class="menu-checkbox"
-          hidden
+      </nav>
+    </div>
+  </header>
+
+  <!-- Tablet/mobile header -->
+  <header class="mobile-header">
+    <input
+      type="checkbox"
+      name=""
+      id="menu-checkbox"
+      class="menu-checkbox"
+      hidden
+    />
+
+    <!-- Overlay -->
+    <label for="menu-checkbox" class="menu-overlay"></label>
+
+    <!-- Menu content -->
+    <div class="menu-drawer">
+      <!-- Logo -->
+      <a href="#">
+        <img
+          src="./assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png"
+          alt="CityLand"
         />
-  
-        <!-- Overlay -->
-        <label for="menu-checkbox" class="menu-overlay"></label>
-  
-        <!-- Menu content -->
-        <div class="menu-drawer">
-          <!-- Logo -->
-          <a href="#">
-            <img src="../assets/img/freepik-candid-image-photography-natural-textures-highly-realistic-light-editorial-generate-a-logo-that-displays-cityland-in-a-geometric-sans-serif-typeface-with-a-stylized-silhouette-of-buildings-ris-2024100517504.png" alt="CityLand" />
-          </a>
-  
-          <!-- Navigation -->
-          <ul id="mobile-nav">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html#services">Services</a></li>
-            <li><a href="/index.html#features">Features</a></li>
-            <li><a href="/index.html#resources">Resources</a></li>
-            <li><a href="/index.html#subscription">Contact</a></li>
-          </ul>
-        </div>
-        
-      </header>
-  <!-- Sign In Modal -->
-  <!-- <div class="modal-overlay" id="signinOverlay">
-    <div class="auth-modal" id="signinModal">
-        <button class="close-btn" onclick="closeModal('signin')">&times;</button>
-        <h2 data-translate="signIn">Sign In</h2>
-        <form class="auth-form">
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <div class="remember-me">
-                <input type="checkbox" id="remember">
-                <label for="remember" data-translate="rememberMe">Remember me</label>
-            </div>
-            <button type="submit" class="auth-btn" data-translate="signIn">Sign In</button>
-        </form>
+      </a>
+
+      <!-- Navigation -->
+      <ul id="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#subscription">Contact</a></li>
+      </ul>
     </div>
-</div> -->
-
-<!-- Sign Up Modal -->
-<!-- <div class="modal-overlay" id="signupOverlay">
-    <div class="auth-modal" id="signupModal">
-        <button class="close-btn" onclick="closeModal('signup')">&times;</button>
-        <h2 data-translate="signUp">Sign Up</h2>
-        <form class="auth-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
-            <div class="remember-me">
-                <input type="checkbox" id="agree" required>
-                <label for="agree" data-translate="agreeToS">I agree to the Terms of Service</label>
-            </div>
-            <button type="submit" class="auth-btn" data-translate="signUp">Sign Up</button>
-        </form>
-    </div>
-</div>
-<script>
-function openModal(type) {
-  document.getElementById(type + 'Modal').classList.add('active');
-  document.getElementById(type + 'Overlay').classList.add('active');
-}
-
-function closeModal(type) {
-  document.getElementById(type + 'Modal').classList.remove('active');
-  document.getElementById(type + 'Overlay').classList.remove('active');
-} -->
-
-<!-- // Update click handlers
-document.querySelector('[data-bs-target="#signinModal"]').onclick = () => openModal('signin');
-document.querySelector('[data-bs-target="#signupModal"]').onclick = () => openModal('signup');
-
-// Close modal when clicking overlay
-document.querySelectorAll('.modal-overlay').forEach(overlay => {
-  overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-          closeModal(overlay.id.replace('Overlay', ''));
-      }
-  });
-});
-</script> -->
-      
-</body>
-</html>
+  </header>
+</header>

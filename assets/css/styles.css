@@ -111,7 +111,6 @@ a:hover {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     z-index: 1000;
     width: 400px;
-    min-width: 300px;
 }
 
 .auth-modal.active {
@@ -127,8 +126,6 @@ a:hover {
     bottom: 0;
     background: rgba(0,0,0,0.5);
     z-index: 999;
-    width: 100%;
-    height: 100%;
 }
 
 .modal-overlay.active {
@@ -291,7 +288,7 @@ a:hover {
 }
 
 .navbar .actions {
-    margin-left: 0px;
+    margin-left: auto;
 }
 
 .navbar ul a {
@@ -869,3 +866,4 @@ img:hover {
     margin-top: 55px;
     padding: 50px 0 58px;
  }
+
