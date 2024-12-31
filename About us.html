@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About us</title>
-
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/Centralparktower.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       function myFunction() {
-        loadScript("/DoanLTWeb-Nhom6-master/components/header.html", "header");
-        loadScript("/DoanLTWeb-Nhom6-master/components/footer.html", "footer");
+        loadScript("/components/header.html", "header");
+        loadScript("/components/footer.html", "footer");
       }
     </script>
 <!-- Favicon -->
@@ -35,7 +38,7 @@ href="./assets/favicon/favicon-192x192.png"
     <!-- Reset CSS -->
     <link
       rel="stylesheet"
-      href="/DoanLTWeb-Nhom6-master/assets/css/reset.css"
+      href="/assets/css/reset.css"
     />
 
     <!-- Embed fonts -->
@@ -47,27 +50,36 @@ href="./assets/favicon/favicon-192x192.png"
     />
     <link
       rel="stylesheet"
-      href="/DoanLTWeb-Nhom6-master/assets/fonts/stylesheet.css"
+      href="/assets/fonts/stylesheet.css"
     />
 
     <!-- Styles -->
     <link
       rel="stylesheet"
-      href="/DoanLTWeb-Nhom6-master/assets/css/styles.css"
+      href="/assets/css/styles.css"
     />
     <link
       rel="stylesheet"
-      href="/DoanLTWeb-Nhom6-master/assets/css/responsive.css"
+      href="/assets/css/responsive.css"
     />
     <link
       rel="stylesheet"
-      href="/DoanLTWeb-Nhom6-master/assets/css/about us.css"
+      href="/assets/css/about us.css"
     />
   </head>
   <body onload="myFunction()">
     <section id="header"></section>
-
-
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="mb-4">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="/Index.html">Home</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      <a href="/About us.html">About us</a>
+    </li>
+  </ol>
+</nav>
     <div class="about-us">
       <div class="about-us-introduction" data-translate="project-introduction">
         PROJECT INTRODUCTION
@@ -167,7 +179,7 @@ href="./assets/favicon/favicon-192x192.png"
           <div class="about-us-member">
             <div class="about-us-member-1">
               <img
-                src="/DoanLTWeb-Nhom6-master/assets/img/Hiep.jpg"
+                src="/assets/img/Hiep.jpg"
                 alt=""
                 class="about-us-img"
               />
@@ -178,7 +190,7 @@ href="./assets/favicon/favicon-192x192.png"
             </div>
             <div class="about-us-member-1">
               <img
-                src="/DoanLTWeb-Nhom6-master/assets/img/Hoan.jpg"
+                src="/assets/img/Hoan.jpg"
                 alt=""
                 class="about-us-img"
               />
@@ -230,7 +242,7 @@ href="./assets/favicon/favicon-192x192.png"
     </script>
 
     <section id="footer"></section>
-    <script src="/DoanLTWeb-Nhom6-master/js/Lang.js"></script>
-    <script src="/DoanLTWeb-Nhom6-master/js/LoadComponent.js"></script>
+    <script src="/js/Lang.js"></script>
+    <script src="/js/LoadComponent.js"></script>
   </body>
 </html>
