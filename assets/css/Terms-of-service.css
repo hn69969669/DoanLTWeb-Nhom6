@@ -1,0 +1,23 @@
+.Terms-of-Service {
+  font-family: Poppins;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  margin: 0 10%;
+}
+.Terms-of-Service-bold {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+}
+.Terms-of-Service-text {
+  color: #4f5361;
+  font-size: 18px;
+  font-weight: 500;
+}
+.Terms-of-Service-1 {
+  gap: 18px;
+}

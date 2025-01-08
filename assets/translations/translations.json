@@ -136,7 +136,19 @@
     "name-1": "Full name*",
     "message": "Message",
     "message-1": "Write your message*",
-    "Submit-request": "Submit request"
+    "Submit-request": "Submit request",
+    "Terms-of-Service": "Terms of Service",
+    "Terms-of-Service-bold-1": "1. Introduction:",
+    "Terms-of-Service-bold-2": "2. Services Provided:",
+    "Terms-of-Service-bold-3": "3. User Responsibilities and Obligations:",
+    "Terms-of-Service-bold-4": "4. Company’s Rights and Responsibilities:",
+    "Terms-of-Service-bold-5": "5. Payment Terms and Service Fees:",
+    "Terms-of-Service-bold-6": "6. Ownership and Protection of Intellectual Property:",
+    "Terms-of-Service-bold-7": "7. Limitation of Liability:",
+    "Terms-of-Service-bold-8": "8. Dispute Resolution:",
+    "Terms-of-Service-bold-9": " 9. Privacy Policy:",
+    "Terms-of-Service-bold-10": "10. Modifications and Updates:",
+    "Terms-of-Service-bold-11": "11. Contact Information:"
   },
   "vi": {
     "home": "Trang Chủ",
@@ -275,6 +287,18 @@
     "name-1": "Họ và tên*",
     "message": "Nội dung",
     "message-1": "Nhập nội dung của bạn*",
-    "Submit-request": "Gửi yêu cầu"
+    "Submit-request": "Gửi yêu cầu",
+    "Terms-of-Service": "Điều khoản và dịch vụ",
+    "Terms-of-Service-bold-1": "",
+    "Terms-of-Service-bold-2": "",
+    "Terms-of-Service-bold-3": "",
+    "Terms-of-Service-bold-4": "",
+    "Terms-of-Service-bold-5": "",
+    "Terms-of-Service-bold-6": "",
+    "Terms-of-Service-bold-7": "",
+    "Terms-of-Service-bold-8": "",
+    "Terms-of-Service-bold-9": "",
+    "Terms-of-Service-bold-10": "",
+    "Terms-of-Service-bold-11": ""
   }
 }

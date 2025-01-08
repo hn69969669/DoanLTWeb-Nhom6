@@ -226,33 +226,6 @@
         </div>
       </div>
     </div>
-    <script>
-      function openModal(type) {
-        document.getElementById(type + "Modal").classList.add("active");
-        document.getElementById(type + "Overlay").classList.add("active");
-      }
-
-      function closeModal(type) {
-        document.getElementById(type + "Modal").classList.remove("active");
-        document.getElementById(type + "Overlay").classList.remove("active");
-      }
-
-      // Update click handlers
-      document.querySelector('[data-bs-target="#signinModal"]').onclick = () =>
-        openModal("signin");
-      document.querySelector('[data-bs-target="#signupModal"]').onclick = () =>
-        openModal("signup");
-
-      // Close modal when clicking overlay
-      document.querySelectorAll(".modal-overlay").forEach((overlay) => {
-        overlay.addEventListener("click", (e) => {
-          if (e.target === overlay) {
-            closeModal(overlay.id.replace("Overlay", ""));
-          }
-        });
-      });
-    </script>
-
     <section id="footer"></section>
     <script src="/js/Lang.js"></script>
     <script src="/js/LoadComponent.js"></script>
