@@ -127,7 +127,16 @@
     "Frequently-Asked-Question-1-6": " The processing time for a rental or purchase agreement typically takes between 7-10 business days, depending on the complexity of the transaction and the availability of required documents.",
     "Frequently-Asked-Question-1-7": " If you need to cancel a reservation, please notify us at least 48 hours in advance for a full refund. Cancellations made within 48 hours will incur a cancellation fee.",
     "Frequently-Asked-Question-1-8": " Pet policies vary by property. Please refer to the individual listing or consult with our team to determine the pet policy for a specific property.",
-    "Frequently-Asked-Question-1-9": "If you encounter a maintenance issue, please contact our customer support team immediately. We’ll arrange for the necessary repairs within 48 hours for most urgent issues."
+    "Frequently-Asked-Question-1-9": "If you encounter a maintenance issue, please contact our customer support team immediately. We’ll arrange for the necessary repairs within 48 hours for most urgent issues.",
+    "Addrhess": "Addrhess:",
+    "Addrhes-1": "182 Le Duan, Ben Thuy, Vinh, Nghe An",
+    "Hotline": "Hotline:",
+    "form-1": "Contact us for suggestions",
+    "name": "Name",
+    "name-1": "Full name*",
+    "message": "Message",
+    "message-1": "Write your message*",
+    "Submit-request": "Submit request"
   },
   "vi": {
     "home": "Trang Chủ",
@@ -257,6 +266,15 @@
     "Frequently-Asked-Question-1-6": " Quá trình ký hợp đồng thường mất từ 7-10 ngày làm việc, tùy vào độ phức tạp của giao dịch và sự có mặt của các giấy tờ cần thiết.",
     "Frequently-Asked-Question-1-7": " Nếu bạn cần hủy bỏ đặt chỗ, vui lòng thông báo cho chúng tôi ít nhất 48 giờ trước để nhận lại toàn bộ tiền. Việc hủy bỏ trong vòng 48 giờ sẽ bị tính phí hủy.",
     "Frequently-Asked-Question-1-8": " Chính sách về thú cưng sẽ khác nhau tùy vào từng bất động sản. Vui lòng tham khảo thông tin cụ thể trong từng danh sách hoặc liên hệ với đội ngũ của chúng tôi để biết chi tiết.",
-    "Frequently-Asked-Question-1-9": "Nếu bạn gặp sự cố về bảo trì, vui lòng liên hệ ngay với đội ngũ hỗ trợ khách hàng của chúng tôi. Chúng tôi sẽ sắp xếp sửa chữa trong vòng 48 giờ đối với các sự cố khẩn cấp."
+    "Frequently-Asked-Question-1-9": "Nếu bạn gặp sự cố về bảo trì, vui lòng liên hệ ngay với đội ngũ hỗ trợ khách hàng của chúng tôi. Chúng tôi sẽ sắp xếp sửa chữa trong vòng 48 giờ đối với các sự cố khẩn cấp.",
+    "Addrhess": "Địa chỉ:",
+    "Addrhes-1": "182 Lê Duẩn, Bến Thủy, Vinh, Nghệ An",
+    "Hotline": "Đường dây nóng: ",
+    "form-1": "Liên hệ với chúng tôi để đưa ra gợi ý.",
+    "name": "Tên của bạn",
+    "name-1": "Họ và tên*",
+    "message": "Nội dung",
+    "message-1": "Nhập nội dung của bạn*",
+    "Submit-request": "Gửi yêu cầu"
   }
 }
