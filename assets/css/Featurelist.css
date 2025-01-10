@@ -1,3 +1,11 @@
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+.card {
+  margin-bottom: 20px;
+}
 .filter-btn {
   font-size: 14px;
   padding: 4px 12px;
