@@ -424,9 +424,6 @@
       </div>
 
       <div class="row mb-4 property-page" id="page2" style="display: none;">
-        <!-- Reuse the same 6 cards with different order -->
-        <!-- Copy the same card structure but change the order -->
-        <!-- First card -->
         <div class="col-md-4">
           <div class="card h-100" data-price="22690000">
             <div class="price">$22,690,000</div>
@@ -688,9 +685,6 @@
       </div>
 
       <div class="row mb-4 property-page" id="page3" style="display: none;">
-        <!-- Reuse the same 6 cards again -->
-        <!-- Copy the same card structure but change the order -->
-        <!-- First card -->
         <div class="col-md-4">
           <div class="card h-100" data-price="4750000">
             <div class="price">$4,750,000</div>
@@ -968,22 +962,6 @@
           </li>
         </ul>
       </nav>
-
-      <style>
-        .pagination .prev.active .page-link,
-        .pagination .next.active .page-link {
-          background-color: transparent;
-          border-color: #dee2e6;
-          color: #0d6efd;
-        }
-
-        .pagination .number.active .page-link {
-          background-color: #0d6efd;
-          border-color: #0d6efd;
-          color: white;
-        }
-      </style>
-
     </div>
 
     <script>
@@ -1006,8 +984,7 @@ function initializeModalHandlers() {
 function myFunction() {
   loadScript("/components/header.html", "header");
   loadScript("/components/footer.html", "footer");
-  setTimeout(initializeModalHandlers, 100); // Give components time to load
-}
+  setTimeout(initializeModalHandlers, 100); 
 </script>
 
 <script>
@@ -1056,7 +1033,6 @@ function myFunction() {
   function clearFilter() {
     document.getElementById("activeFilter").textContent = "";
     document.getElementById("selectedFilters").classList.remove("show");
-    // Reset to original order if needed
     location.reload();
   }
 
