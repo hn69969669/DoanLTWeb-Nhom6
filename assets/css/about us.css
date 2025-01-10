@@ -47,6 +47,7 @@
 .about-us-member {
   display: flex;
   justify-content: space-between;
+  gap: 150px;
   width: 100%;
   padding-top: 48px;
 }
