@@ -58,22 +58,27 @@
 
           <!-- Existing actions -->
           <div class="actions">
-            <a
-              href="#"
-              class="action-link"
-              data-bs-toggle="modal"
-              data-bs-target="#signinModal"
-              data-translate="signIn"
-              >Sign in</a
-            >
-            <a
-              href="#"
-              class="btn action-btn"
-              data-bs-toggle="modal"
-              data-bs-target="#signupModal"
-              data-translate="signUp"
-              >Sign up</a
-            >
+            <div class="auth-buttons">
+              <a
+                href="#"
+                class="action-link"
+                data-bs-toggle="modal"
+                data-bs-target="#signinModal"
+                data-translate="signIn"
+                >Sign in</a
+              >
+              <a
+                href="#"
+                class="btn action-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#signupModal"
+                data-translate="signUp"
+                >Sign up</a
+              >
+            </div>
+            <div class="user-actions" style="display: none;">
+              <a href="#" class="btn action-btn" onclick="handleLogout()" data-translate="logout">Logout</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -124,11 +129,14 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form class="auth-form">
+          <div class="alert alert-success" id="loginSuccess" style="display: none;">
+            Login successful!
+          </div>
+          <form class="auth-form" onsubmit="return handleLogin(event)">
             <input type="email" class="form-control mb-3" placeholder="Email" required />
             <input type="password" class="form-control mb-3" placeholder="Password" required />
-            <div class="form-check mb-3">
-              <input type="checkbox" class="form-check-input" id="remember" />
+            <div class="form-check mb-3 d-flex align-items-center gap-2">
+              <input type="checkbox" class="form-check-input mt-0" id="remember" />
               <label class="form-check-label" for="remember" data-translate="rememberMe">Remember me</label>
             </div>
             <button type="submit" class="btn btn-primary" data-translate="signIn">Sign In</button>
@@ -147,14 +155,20 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form class="auth-form">
+          <div class="alert alert-success" id="registerSuccess" style="display: none;">
+            Account created successfully!
+          </div>
+          <form class="auth-form" onsubmit="return handleRegister(event)">
             <input type="text" class="form-control mb-3" placeholder="Full Name" required />
             <input type="email" class="form-control mb-3" placeholder="Email" required />
             <input type="password" class="form-control mb-3" placeholder="Password" required />
             <input type="password" class="form-control mb-3" placeholder="Confirm Password" required />
-            <div class="form-check mb-3">
-              <input type="checkbox" class="form-check-input" id="agree" required />
-              <label class="form-check-label" for="agree" data-translate="agreeToS">I agree to the Terms of Service</label>
+            <div class="form-check mb-3 d-flex align-items-center gap-2">
+              <input type="checkbox" class="form-check-input mt-0" id="agree" required />
+              <label class="form-check-label" for="agree" data-translate="agreeToS">
+                I agree to the 
+                <a href="/Terms of Service.html">Terms of Service</a>
+              </label>
             </div>
             <button type="submit" class="btn btn-primary" data-translate="signUp">Sign Up</button>
           </form>
@@ -162,4 +176,5 @@
       </div>
     </div>
   </div>
+
 </header>
