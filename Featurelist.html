@@ -95,10 +95,10 @@
       <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="/Index.html">Home</a>
+            <a href="/Index.html" data-translate="home">Home</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">
-            <a href="">Feature List </a>
+            <a href="" data-translate="features">Feature List</a>
           </li>
         </ol>
       </nav>
@@ -118,6 +118,7 @@
             id="filterDropdown"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            data-translate="filter"
           >
             Filter
           </button>
@@ -130,6 +131,7 @@
                 class="dropdown-item"
                 href="#"
                 onclick="applyFilter('New listing')"
+                data-translate="new-listing"
                 >New listing</a
               >
             </li>
@@ -138,6 +140,7 @@
                 class="dropdown-item"
                 href="#"
                 onclick="applyFilter('Price: High-Low')"
+                data-translate="price-h"
                 >Price: High-Low</a
               >
             </li>
@@ -146,6 +149,7 @@
                 class="dropdown-item"
                 href="#"
                 onclick="applyFilter('Price: Low-High')"
+                data-translate="price-l"
                 >Price: Low-High</a
               >
             </li>
@@ -153,8 +157,8 @@
         </div>
       </div>
 
-      <!-- Update property cards with unique content -->
-      <div class="row mb-4" id="propertyContainer">
+      <!-- Property containers for different pages -->
+      <div class="row mb-4 property-page" id="page1">
         <div class="col-md-4">
           <div class="card h-100" data-price="150000000">
             <div class="price">$150,000,000</div>
@@ -178,26 +182,27 @@
                     src="/assets/img/beds.svg"
                     alt="beds"
                   />
-                  <span>8 Beds</span>
+                  <span data-translate="beds">8 Beds</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/both.svg"
                     alt="baths"
                   />
-                  <span>7 Baths</span>
+                  <span data-translate="baths">7 Baths</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/sqft.svg"
                     alt="sqft"
                   />
-                  <span>9,870 Sqft</span>
+                  <span data-translate="sqft">9870 Sqft</span>
                 </div>
               </div>
               <a
                 href="/Centralparktower.html"
                 class="btn btn-primary mt-3"
+                data-translate="details"
                 >Detail</a
               >
             </div>
@@ -226,26 +231,27 @@
                     src="/assets/img/beds.svg"
                     alt="beds"
                   />
-                  <span>6 Beds</span>
+                  <span data-translate="beds">6 Beds</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/both.svg"
                     alt="baths"
                   />
-                  <span>3 Baths</span>
+                  <span data-translate="baths">3 Baths</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/sqft.svg"
                     alt="sqft"
                   />
-                  <span>2,000 Sqft</span>
+                  <span data-translate="sqft">2000 Sqft</span>
                 </div>
               </div>
               <a
                 href="/295krumvilleroad.html"
                 class="btn btn-primary mt-3"
+                data-translate="details"
                 >Detail</a
               >
             </div>
@@ -274,69 +280,33 @@
                     src="/assets/img/beds.svg"
                     alt="beds"
                   />
-                  <span>3 Beds</span>
+                  <span data-translate="beds">3 Beds</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/both.svg"
                     alt="baths"
                   />
-                  <span>2 Baths</span>
+                  <span data-translate="baths">2 Baths</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/sqft.svg"
                     alt="sqft"
                   />
-                  <span>1,200 Sqft</span>
+                  <span data-translate="sqft">1200 Sqft</span>
                 </div>
               </div>
               <a
                 href="/Hamsphirehouse.html"
                 class="btn btn-primary mt-3"
+                data-translate="details"
                 >Detail</a
               >
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-4">
-          <div class="card h-100" data-price="4750000">
-            <div class="price">$4,750,000</div>
-            <img
-              src="/assets/fea-img/3a.png"
-              class="card-img-top"
-              alt="Property"
-            />
-            <div class="card-body">
-              <h4 class="card-title">Hampshire House</h4>
-              <p class="card-text">6 Bama, Olono</p>
-              <div class="property-info">
-                <div class="info-item">
-                  <img
-                    src="/assets/img/beds.svg"
-                    alt="beds"
-                  />
-                  <span>4 Beds</span>
-                </div>
-                <div class="info-item">
-                  <img
-                    src="/assets/img/both.svg"
-                    alt="baths"
-                  />
-                  <span>2 Baths</span>
-                </div>
-                <div class="info-item">
-                  <img
-                    src="/assets/img/sqft.svg"
-                    alt="sqft"
-                  />
-                  <span>1,500 Sqft</span>
-                </div>
-              </div>
-              <a href="#" class="btn btn-primary mt-3">Detail</a>
-            </div>
-          </div>
-        </div> -->
+
         <div class="col-md-4">
           <div class="card h-100" data-price="3695000">
             <div class="price">$3,695,000</div>
@@ -346,7 +316,7 @@
               alt="Property"
             />
             <div class="card-body">
-              <h4 class="card-title">Hampshire House</h4>
+              <h4 class="card-title">Mina House</h4>
               <p class="card-text">852 Preston, Venty</p>
               <div class="property-info">
                 <div class="info-item">
@@ -354,24 +324,24 @@
                     src="/assets/img/beds.svg"
                     alt="beds"
                   />
-                  <span>3 Beds</span>
+                  <span data-translate="beds">5Beds</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/both.svg"
                     alt="baths"
                   />
-                  <span>2 Baths</span>
+                  <span data-translate="baths">2Baths</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/sqft.svg"
                     alt="sqft"
                   />
-                  <span>1,200 Sqft</span>
+                  <span data-translate="sqft">490 Sqft</span>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary mt-3">Detail</a>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
             </div>
           </div>
         </div>
@@ -392,24 +362,24 @@
                     src="/assets/img/beds.svg"
                     alt="beds"
                   />
-                  <span>2 Beds</span>
+                  <span data-translate="beds">9 Beds</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/both.svg"
                     alt="baths"
                   />
-                  <span>2 Baths</span>
+                  <span data-translate="baths">5 Baths</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/sqft.svg"
                     alt="sqft"
                   />
-                  <span>800 Sqft</span>
+                  <span data-translate="sqft">800 Sqft</span>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary mt-3">Detail</a>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
             </div>
           </div>
         </div>
@@ -430,47 +400,590 @@
                     src="/assets/img/beds.svg"
                     alt="beds"
                   />
-                  <span>8 Beds</span>
+                  <span data-translate="beds">4Beds</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/both.svg"
                     alt="baths"
                   />
-                  <span>6 Baths</span>
+                  <span data-translate="baths">2 Baths</span>
                 </div>
                 <div class="info-item">
                   <img
                     src="/assets/img/sqft.svg"
                     alt="sqft"
                   />
-                  <span>5900 Sqft</span>
+                  <span data-translate="sqft">5900 Sqft</span>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary mt-3">Detail</a>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Add pagination after the card rows -->
+      <div class="row mb-4 property-page" id="page2" style="display: none;">
+        <!-- Reuse the same 6 cards with different order -->
+        <!-- Copy the same card structure but change the order -->
+        <!-- First card -->
+        <div class="col-md-4">
+          <div class="card h-100" data-price="22690000">
+            <div class="price">$22,690,000</div>
+            <img src="/assets/fea-img/6a.png" class="card-img-top" alt="Property"/>
+            <div class="card-body">
+              <h4 class="card-title">527 Wadon</h4>
+              <p class="card-text">8 Elias, Banza </p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">4Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">2 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">5900 Sqft</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other 5 cards -->
+        <div class="col-md-4">
+          <div class="card h-100" data-price="2675000">
+            <div class="price">$2,675,000</div>
+            <img
+              src="/assets/fea-img/5a.png"
+              class="card-img-top"
+              alt="Property"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Norfolk</h4>
+              <p class="card-text">7 Chigan, Fragent</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">9 Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">5 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">800 Sqft</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100" data-price="3695000">
+            <div class="price">$3,695,000</div>
+            <img
+              src="/assets/fea-img/4a.png"
+              class="card-img-top"
+              alt="Property"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Mina House</h4>
+              <p class="card-text">852 Preston, Venty</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">5Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">2Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">490 Sqft</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100" data-price="4750000">
+            <div class="price">$4,750,000</div>
+            <a href="/Hamsphirehouse.html">
+              <img
+                src="/assets/fea-img/3a.png"
+                class="card-img-top"
+                alt="Property"
+              />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/Hamsphirehouse.html"
+                  >Hampshire House</a
+                >
+              </h4>
+              <p class="card-text">852 Preston, Venty</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">3 Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">2 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">1200 Sqft</span>
+                </div>
+              </div>
+              <a
+                href="/Hamsphirehouse.html"
+                class="btn btn-primary mt-3"
+                data-translate="details"
+                >Detail</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100" data-price="16895000">
+            <div class="price">$16,895,000</div>
+            <a href="/295krumvilleroad.html">
+              <img
+                src="/assets/fea-img/2a.png"
+                class="card-img-top"
+                alt="Property"
+              />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/295krumvilleroad.html"
+                  >295 Krumville Road</a
+                >
+              </h4>
+              <p class="card-text">523 Nichican, Maine</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">6 Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">3 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">2000 Sqft</span>
+                </div>
+              </div>
+              <a
+                href="/295krumvilleroad.html"
+                class="btn btn-primary mt-3"
+                data-translate="details"
+                >Detail</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100" data-price="150000000">
+            <div class="price">$150,000,000</div>
+            <a href="/Centralparktower.html">
+              <img
+                src="/assets/fea-img/1a.png"
+                class="card-img-top"
+                alt="Property"
+              />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/Centralparktower.html"
+                  >Central Park Tower</a
+                >
+              </h4>
+              <p class="card-text">852 Preston, Venty</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">8 Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">7 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">9870 Sqft</span>
+                </div>
+              </div>
+              <a
+                href="/Centralparktower.html"
+                class="btn btn-primary mt-3"
+                data-translate="details"
+                >Detail</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-4 property-page" id="page3" style="display: none;">
+        <!-- Reuse the same 6 cards again -->
+        <!-- Copy the same card structure but change the order -->
+        <!-- First card -->
+        <div class="col-md-4">
+          <div class="card h-100" data-price="4750000">
+            <div class="price">$4,750,000</div>
+            <a href="/Hamsphirehouse.html">
+              <img
+                src="/assets/fea-img/3a.png"
+                class="card-img-top"
+                alt="Property"
+              />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/Hamsphirehouse.html"
+                  >Hampshire House</a
+                >
+              </h4>
+              <p class="card-text">852 Preston, Venty</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">3 Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">2 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">1200 Sqft</span>
+                </div>
+              </div>
+              <a
+                href="/Hamsphirehouse.html"
+                class="btn btn-primary mt-3"
+                data-translate="details"
+                >Detail</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other 5 cards -->
+        <div class="col-md-4">
+          <div class="card h-100" data-price="150000000">
+            <div class="price">$150,000,000</div>
+            <a href="/Centralparktower.html">
+              <img
+                src="/assets/fea-img/1a.png"
+                class="card-img-top"
+                alt="Property"
+              />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/Centralparktower.html"
+                  >Central Park Tower</a
+                >
+              </h4>
+              <p class="card-text">852 Preston, Venty</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">8 Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">7 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">9870 Sqft</span>
+                </div>
+              </div>
+              <a
+                href="/Centralparktower.html"
+                class="btn btn-primary mt-3"
+                data-translate="details"
+                >Detail</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100" data-price="16895000">
+            <div class="price">$16,895,000</div>
+            <a href="/295krumvilleroad.html">
+              <img
+                src="/assets/fea-img/2a.png"
+                class="card-img-top"
+                alt="Property"
+              />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/295krumvilleroad.html"
+                  >295 Krumville Road</a
+                >
+              </h4>
+              <p class="card-text">523 Nichican, Maine</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">6 Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">3 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">2000 Sqft</span>
+                </div>
+              </div>
+              <a
+                href="/295krumvilleroad.html"
+                class="btn btn-primary mt-3"
+                data-translate="details"
+                >Detail</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100" data-price="22690000">
+            <img src="/assets/fea-img/6a.png" class="card-img-top" alt="Property"/>
+            <div class="card-body">
+              <h4 class="card-title">527 Wadon</h4>
+              <p class="card-text">8 Elias, Banza </p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">4Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">2 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">5900 Sqft</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100" data-price="2675000">
+            <div class="price">$2,675,000</div>
+            <img
+              src="/assets/fea-img/5a.png"
+              class="card-img-top"
+              alt="Property"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Norfolk</h4>
+              <p class="card-text">7 Chigan, Fragent</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">9 Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">5 Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">800 Sqft</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100" data-price="3695000">
+            <div class="price">$3,695,000</div>
+            <img
+              src="/assets/fea-img/4a.png"
+              class="card-img-top"
+              alt="Property"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Mina House</h4>
+              <p class="card-text">852 Preston, Venty</p>
+              <div class="property-info">
+                <div class="info-item">
+                  <img
+                    src="/assets/img/beds.svg"
+                    alt="beds"
+                  />
+                  <span data-translate="beds">5Beds</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/both.svg"
+                    alt="baths"
+                  />
+                  <span data-translate="baths">2Baths</span>
+                </div>
+                <div class="info-item">
+                  <img
+                    src="/assets/img/sqft.svg"
+                    alt="sqft"
+                  />
+                  <span data-translate="sqft">490 Sqft</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary mt-3" data-translate="details">Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Update pagination section -->
       <nav aria-label="Page navigation" class="mt-4">
         <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
+          <li class="page-item prev">
+            <a class="page-link" href="#page1" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
+          <li class="page-item number active"><a class="page-link" href="#page1">1</a></li>
+          <li class="page-item number"><a class="page-link" href="#page2">2</a></li>
+          <li class="page-item number"><a class="page-link" href="#page3">3</a></li>
+          <li class="page-item next">
+            <a class="page-link" href="#page3" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
         </ul>
       </nav>
+
+      <style>
+        .pagination .prev.active .page-link,
+        .pagination .next.active .page-link {
+          background-color: transparent;
+          border-color: #dee2e6;
+          color: #0d6efd;
+        }
+
+        .pagination .number.active .page-link {
+          background-color: #0d6efd;
+          border-color: #0d6efd;
+          color: white;
+        }
+      </style>
+
     </div>
 
     <script>
@@ -564,7 +1077,83 @@ function myFunction() {
       }
     });
   });
+
+  let currentPage = 1;
+  const totalPages = 3;
+
+  function changePage(page) {
+    // Hide all pages
+    document.querySelectorAll('.property-page').forEach(p => {
+      p.style.display = 'none';
+    });
+    
+    // Handle prev/next
+    if (page === 'prev') {
+      currentPage = Math.max(1, currentPage - 1);
+    } else if (page === 'next') {
+      currentPage = Math.min(totalPages, currentPage + 1);
+    } else {
+      currentPage = parseInt(page);
+    }
+    
+    // Show current page
+    const currentPageElement = document.getElementById(`page${currentPage}`);
+    if (currentPageElement) {
+      currentPageElement.style.display = 'flex';
+    }
+    
+    // Update active state in pagination
+    document.querySelectorAll('.pagination .page-item').forEach(item => {
+      item.classList.remove('active');
+    });
+    const activePageItem = document.querySelector(`.pagination .page-item:nth-child(${currentPage + 1})`);
+    if (activePageItem) {
+      activePageItem.classList.add('active');
+    }
+  }
+
+  // Initialize page on load
+  document.addEventListener('DOMContentLoaded', function() {
+    changePage(1);
+  });
 </script>
+
+<script>
+// Handle hash-based navigation
+function handleHashChange() {
+  // Hide all pages
+  document.querySelectorAll('.property-page').forEach(page => {
+    page.style.display = 'none';
+  });
+
+  // Get the hash without the # symbol
+  const hash = window.location.hash.slice(1) || 'page1';
+  
+  // Show the selected page
+  const currentPage = document.getElementById(hash);
+  if (currentPage) {
+    currentPage.style.display = 'flex';
+  }
+
+  // Update active state in pagination
+  document.querySelectorAll('.pagination .page-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  
+  // Only add active class to number buttons
+  const pageNum = hash.replace('page', '');
+  document.querySelector(`.pagination .number:nth-child(${parseInt(pageNum) + 1})`)?.classList.add('active');
+}
+
+// Listen for hash changes
+window.addEventListener('hashchange', handleHashChange);
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  handleHashChange();
+});
+</script>
+
     <section id="footer"></section>
     <script src="/js/Lang.js"></script>
     <script src="/js/LoadComponent.js"></script>

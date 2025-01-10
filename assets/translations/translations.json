@@ -170,7 +170,22 @@
     "Terms-of-Service-text-19": "In case of disputes, we encourage users to contact us directly to resolve the matter amicably. If necessary, disputes will be resolved under the laws of [Your Jurisdiction] through arbitration or a competent court.",
     "Terms-of-Service-text-20": "We are committed to protecting your personal data. Please refer to our Privacy Policy for details on how we collect, use, and share your information.",
     "Terms-of-Service-text-21": "We may update these terms periodically. Changes will be effective immediately upon posting. Continued use of our services indicates your acceptance of the updated terms.",
-    "Terms-of-Service-text-22": "If you have any questions or concerns regarding these Terms of Service, please contact us: here"
+    "Terms-of-Service-text-22": "If you have any questions or concerns regarding these Terms of Service, please contact us: here",
+    "filter": "Filter",
+    "new-listing": "New Listing",
+    "price-l": "Price :Low-High",
+    "price-h": "Price :High-Low",
+    "details": "Detail",
+    "beds": "Beds",
+    "baths": "Baths",
+    "sqft": "Sqft",
+    "cont": "Contact me",
+    "your-name": "Your Name",
+    "your-email": "Your Email",
+    "your-message": "Your Message",
+    "send": "Send Message",
+    "central-desc":"Property description Central Park Tower, #127/128, Midtown West, New York, NY 10019.Introducing SKY HOUSE1,386 feet above Manhattan rests one of the most captivating properties ever constructed. Sky House is the highest duplex penthouse at the legendary Central Park Tower, the tallest residential building and most prestigious address in the world. Now offered for sale, this is a once-in-a-lifetime opportunity to own a truly irreplicable mansion in the clouds. Stretching across the entire 127th and 128th floors of New York's consummate modern marvel, Sky House is a celebration of majestic scale, outstanding craftsmanship, and exquisite appointment set before the backdrop of stratospheric views that stretch from the shores of the Atlantic to the far hills of New Jersey, and from the Statue of Liberty to New England.The remarkable 11,535 square feet of living space at Sky House allows the home to achieve a coveted layout that masterfully separates awe-inspiring entertainment spaces from equally spectacular private living quarters. A private reception hall opens into a palatial, 39-foot gallery befitting the world's most celebrated artworks. Just across, the centrally located observatory beckons one to experience the splendor of Central Park's foliage below. The adjacent library provides an inviting setting for quiet contemplation.The 1,550 square foot, ballroom-scale grand salon features soaring 14-foot ceilings and 270-degree views of Central Park and the landmarks of New York City below, encapsulated by three walls of floor-to-ceiling crystalline glass windows. From the banquet-sized south and east-facing dining room, one can watch the lights dance on the Empire State Building and the Times Square ball drop on New Year’s Eve. The adjacent chef-caliber kitchen features custom Eucalyptus cabinetry by Smallbone of Devizes, book-matched Statuary marble countertops, Dornbracht polished nickel fixtures, custom polished nickel hardware, and white Neuvellano stone flooring. A discreet service hall conveniently connects the kitchen to the service elevator.A neighboring south and west-facing family room serves as a nexus to a private wing that connects to two bedrooms with ensuite baths. An additional park-facing ensuite bedroom/media room completes the 127th floor. The jewel of Sky House takes form in the palatial double-height stair hall, where a magnificent glass-ensconced sculptural staircase connects the two floors of the home. One's experience ascending to the 128th floor is akin to that of floating on a cloud.The primary bedroom suite is in a league of its own, with two boutique-sized dressing rooms and two primary bathrooms featuring radiant heated floors, Grigio Orobico and statuary marble, Dornbracht fixtures, and a spectacular freestanding tub that seemingly floats above the trees of Central Park. An adjacent park-facing ensuite bedroom provides the opportunity to create an even larger primary suite complete with a private media room."
+
   },
   "vi": {
     "home": "Trang Chủ",
@@ -344,6 +359,20 @@
     "Terms-of-Service-text-20": "Chúng tôi cam kết bảo vệ dữ liệu cá nhân của bạn. Vui lòng tham khảo Chính Sách Bảo Mật của chúng tôi để biết chi tiết về cách chúng tôi thu thập, sử dụng và chia sẻ thông tin của bạn.",
     "Terms-of-Service-text-21": "Chúng tôi có thể cập nhật các điều khoản này theo thời gian. Các thay đổi sẽ có hiệu lực ngay khi được đăng tải. Việc tiếp tục sử dụng dịch vụ của bạn đồng nghĩa với việc chấp nhận các điều khoản đã cập nhật.",
     "Terms-of-Service-text-22": "Nếu bạn có bất kỳ câu hỏi hoặc mối quan tâm nào liên quan đến các Điều khoản Dịch vụ này, vui lòng liên hệ với chúng tôi: Tại đây",
-    "Terms-of-Service-text-23": "tại đây."
+    "Terms-of-Service-text-23": "tại đây.",
+    "filter": "Bộ lọc",
+    "new-listing": "Danh sách mới",
+    "price-l": "Giá :Thấp-Cao",
+    "price-h": "Giá :Cao-Thấp",
+    "details": "Chi tiết",
+    "beds": "Phòng ngủ",
+    "baths": "Phòng tắm",
+    "sqft": "Diện tích",
+    "cont": "Liên hệ với tôi",
+    "your-name": "Tên của bạn",
+    "your-email": "Email của bạn",
+    "your-message": "Tin nhắn của bạn",
+    "send": "Gửi tin nhắn",
+    "central-desc":"Mô tả bất động sản Central Park Tower, #127/128, Midtown West, New York, NY 10019. Giới thiệu SKY HOUSE cao 1.386 feet so với Manhattan là một trong những bất động sản quyến rũ nhất từng được xây dựng. Sky House là căn hộ thông tầng cao nhất tại Central Park Tower huyền thoại, tòa nhà dân cư cao nhất và là địa chỉ uy tín nhất trên thế giới. Hiện đang được rao bán, đây là cơ hội duy nhất trong đời để sở hữu một dinh thự thực sự không thể sao chép trên mây. Trải dài trên toàn bộ tầng 127 và 128 của kỳ quan hiện đại hoàn hảo của New York, Sky House là sự tôn vinh quy mô hùng vĩ, tay nghề thủ công xuất sắc và sự sắp xếp tinh tế trước bối cảnh của tầm nhìn tầng bình lưu trải dài từ bờ Đại Tây Dương đến những ngọn đồi xa xôi của New Jersey, và từ Tượng Nữ thần Tự do đến New England.\n Không gian sống đáng chú ý rộng 11.535 feet vuông tại Sky House cho phép ngôi nhà đạt được bố cục đáng mơ ước, khéo léo tách biệt không gian giải trí đầy cảm hứng với không gian sống riêng tư ngoạn mục không kém. Một sảnh tiếp tân riêng mở ra một phòng trưng bày rộng 39 feet, lộng lẫy, xứng đáng với những tác phẩm nghệ thuật nổi tiếng nhất thế giới. Ngay bên kia, đài quan sát nằm ở vị trí trung tâm vẫy gọi bạn trải nghiệm vẻ đẹp lộng lẫy của tán lá Công viên Trung tâm bên dưới. Thư viện liền kề cung cấp một bối cảnh hấp dẫn cho sự chiêm nghiệm yên tĩnh. Phòng khách lớn rộng 1.550 foot vuông, có trần nhà cao 14 foot và tầm nhìn 270 độ ra Công viên Trung tâm và các địa danh của Thành phố New York bên dưới, được bao bọc bởi ba bức tường cửa sổ kính pha lê từ sàn đến trần. Từ phòng ăn hướng nam và hướng đông có kích thước tiệc, người ta có thể ngắm nhìn ánh đèn nhảy múa trên Tòa nhà Empire State và quả cầu thả xuống Quảng trường Thời đại vào đêm giao thừa.\n Nhà bếp đẳng cấp đầu bếp liền kề có tủ Eucalyptus tùy chỉnh của Smallbone of Devizes, mặt bàn bằng đá cẩm thạch Statuary phù hợp với sách, đồ đạc bằng niken đánh bóng Dornbracht, phần cứng niken đánh bóng tùy chỉnh và sàn đá Neuvellano màu trắng. Một sảnh dịch vụ kín đáo kết nối thuận tiện nhà bếp với thang máy dịch vụ. Một phòng gia đình hướng nam và hướng tây lân cận đóng vai trò là điểm kết nối với một cánh riêng kết nối với hai phòng ngủ có phòng tắm riêng. Một phòng ngủ/phòng giải trí riêng hướng ra công viên bổ sung hoàn thiện tầng 127. Viên ngọc của Sky House được tạo hình trong sảnh cầu thang cao gấp đôi, nơi có cầu thang điêu khắc bằng kính tráng lệ kết nối hai tầng của ngôi nhà.\n Trải nghiệm của một người khi lên tầng 128 giống như đang lơ lửng trên một đám mây. Phòng ngủ chính nằm trong một đẳng cấp riêng, với hai phòng thay đồ cỡ boutique và hai phòng tắm chính có sàn sưởi ấm, Grigio Orobico và đá cẩm thạch tượng, đồ đạc Dornbracht và bồn tắm đứng ngoạn mục dường như lơ lửng trên những hàng cây của Công viên Trung tâm.Phòng ngủ khép kín hướng ra công viên liền kề tạo cơ hội tạo ra một phòng ngủ chính lớn hơn, có phòng giải trí riêng."
   }
 }

@@ -26,7 +26,7 @@ async function changeLanguage(lang) {
       if (element.placeholder) {
         element.placeholder = translations[lang][key];
       } else {
-        element.textContent = translations[lang][key];
+        element.innerHTML = translations[lang][key];
       }
     }
   });
