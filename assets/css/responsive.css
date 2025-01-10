@@ -256,6 +256,20 @@
     }
 
     .stats .row-qty {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    .stats .qty-item {
+        width: 33.33%;
+    }
+
+    .stats .qty {
+        font-size: 4rem;
+    }
+
+    .stats .row-qty {
         flex-direction: column;
         align-items: center;
         row-gap: 60px;

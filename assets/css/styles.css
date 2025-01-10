@@ -702,9 +702,15 @@ img:hover {
 }
 
 .stats .row-qty {
+    display: flex;
     justify-content: space-between;
     margin-top: 110px;
     padding: 0 32px;
+}
+
+.stats .qty-item {
+    text-align: center;
+    width: 33.33%;
 }
 
 .stats .qty {
