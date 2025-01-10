@@ -69,7 +69,7 @@
                 />
               </svg>
             </label>
-
+    
             <!-- Logo -->
             <a href="#">
               <img
@@ -78,60 +78,69 @@
                 alt="Cityland"
               />
             </a>
-
+    
             <!-- Navigation -->
             <ul id="pc-nav">
               <li>
-                <a href="/Index.html" data-translate="home">Home</a>
+                <a href="/index.html" data-translate="home">Home</a>
               </li>
               <li>
-                <a href="#services" data-translate="services">Services</a>
+                <a href="/index.html#services" data-translate="services"
+                  >Services</a
+                >
               </li>
               <li>
-                <a href="#features" data-translate="features">Features</a>
+                <a href="/index.html#features" data-translate="features"
+                  >Features</a
+                >
               </li>
               <li>
-                <a href="#resources" data-translate="resources">Resources</a>
+                <a href="/index.html#resources" data-translate="resources"
+                  >Resources</a
+                >
               </li>
               <li>
-                <a href="#subscription" data-translate="contact">Contact</a>
+                <a href="/index.html#subscription" data-translate="contact"
+                  >Contact</a
+                >
               </li>
             </ul>
-
+    
             <div class="actions-right">
-              <select
-                class="language-switch"
-                onchange="changeLanguage(this.value)"
-              >
+              <select class="language-switch" onchange="changeLanguage(this.value)">
                 <option value="en">English</option>
                 <option value="vi">Tiếng Việt</option>
               </select>
-
+    
               <!-- Existing actions -->
               <div class="actions">
-                <a
-                  href="#"
-                  class="action-link"
-                  data-bs-toggle="modal"
-                  data-bs-target="#signinModal"
-                  data-translate="signIn"
-                  >Sign in</a
-                >
-                <a
-                  href="#"
-                  class="btn action-btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#signupModal"
-                  data-translate="signUp"
-                  >Sign up</a
-                >
+                <div class="auth-buttons">
+                  <a
+                    href="#"
+                    class="action-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#signinModal"
+                    data-translate="signIn"
+                    >Sign in</a
+                  >
+                  <a
+                    href="#"
+                    class="btn action-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#signupModal"
+                    data-translate="signUp"
+                    >Sign up</a
+                  >
+                </div>
+                <div class="user-actions" style="display: none;">
+                  <a href="#" class="btn action-btn" onclick="handleLogout()" data-translate="logout">Logout</a>
+                </div>
               </div>
-
             </div>
           </nav>
         </div>
       </header>
-
+    
       <!-- Tablet/mobile header -->
       <header class="mobile-header">
         <input
@@ -141,10 +150,10 @@
           class="menu-checkbox"
           hidden
         />
-
+    
         <!-- Overlay -->
         <label for="menu-checkbox" class="menu-overlay"></label>
-
+    
         <!-- Menu content -->
         <div class="menu-drawer">
           <!-- Logo -->
@@ -154,18 +163,77 @@
               alt="CityLand"
             />
           </a>
-
+    
           <!-- Navigation -->
           <ul id="mobile-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#subscription">Contact</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html#services">Services</a></li>
+            <li><a href="/index.html#features">Features</a></li>
+            <li><a href="/index.html#resources">Resources</a></li>
+            <li><a href="/index.html#subscription">Contact</a></li>
           </ul>
         </div>
       </header>
+    
+      <!-- Sign In Modal -->
+      <div class="modal fade" id="signinModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" data-translate="signIn">Sign In</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-success" id="loginSuccess" style="display: none;">
+                Login successful!
+              </div>
+              <form class="auth-form" onsubmit="return handleLogin(event)">
+                <input type="email" class="form-control mb-3" placeholder="Email" required />
+                <input type="password" class="form-control mb-3" placeholder="Password" required />
+                <div class="form-check mb-3 d-flex align-items-center gap-2">
+                  <input type="checkbox" class="form-check-input mt-0" id="remember" />
+                  <label class="form-check-label" for="remember" data-translate="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary" data-translate="signIn">Sign In</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Sign Up Modal -->
+      <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" data-translate="signUp">Sign Up</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-success" id="registerSuccess" style="display: none;">
+                Account created successfully!
+              </div>
+              <form class="auth-form" onsubmit="return handleRegister(event)">
+                <input type="text" class="form-control mb-3" placeholder="Full Name" required />
+                <input type="email" class="form-control mb-3" placeholder="Email" required />
+                <input type="password" class="form-control mb-3" placeholder="Password" required />
+                <input type="password" class="form-control mb-3" placeholder="Confirm Password" required />
+                <div class="form-check mb-3 d-flex align-items-center gap-2">
+                  <input type="checkbox" class="form-check-input mt-0" id="agree" required />
+                  <label class="form-check-label" for="agree" data-translate="agreeToS">
+                    I agree to the 
+                    <a href="/Terms of Service.html">Terms of Service</a>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary" data-translate="signUp">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
     </header>
+    
 
     <main>
       <!-- Hero -->
@@ -587,87 +655,9 @@
     </main>
 
     <section id="footer"></section>
-
-    <!-- Sign In Modal -->
-    <div class="modal-overlay" id="signinOverlay">
-      <div class="auth-modal" id="signinModal">
-        <button class="close-btn" onclick="closeModal('signin')">
-          &times;
-        </button>
-        <h2 data-translate="signIn">Sign In</h2>
-        <form class="auth-form">
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-          <div class="remember-me">
-            <input type="checkbox" id="remember" />
-            <label for="remember" data-translate="rememberMe"
-              >Remember me</label
-            >
-          </div>
-          <button type="submit" class="auth-btn" data-translate="signIn">
-            Sign In
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Sign Up Modal -->
-    <div class="modal-overlay" id="signupOverlay">
-      <div class="auth-modal" id="signupModal">
-        <button class="close-btn" onclick="closeModal('signup')">
-          &times;
-        </button>
-        <h2 data-translate="signUp">Sign Up</h2>
-        <form class="auth-form">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-          <input type="password" placeholder="Confirm Password" required />
-          <div class="remember-me">
-            <input type="checkbox" id="agree" required />
-            <label for="agree" data-translate="agreeToS"
-              >I agree to the Terms of Service</label
-            >
-            <a href="/Terms of Service.html"
-              ><br />
-              <div data-translate="Terms-of-Service">
-                Terms and conditions
-              </div></a
-            >
-          </div>
-          <button type="submit" class="auth-btn" data-translate="signUp">
-            Sign Up
-          </button>
-        </form>
-      </div>
-    </div>
-    <script src="/js/Lang.js"></script>
     <script src="/js/LoadComponent.js"></script>
-    <script>
-      function openModal(type) {
-        document.getElementById(type + "Modal").classList.add("active");
-        document.getElementById(type + "Overlay").classList.add("active");
-      }
-
-      function closeModal(type) {
-        document.getElementById(type + "Modal").classList.remove("active");
-        document.getElementById(type + "Overlay").classList.remove("active");
-      }
-
-      // Update click handlers
-      document.querySelector('[data-bs-target="#signinModal"]').onclick = () =>
-        openModal("signin");
-      document.querySelector('[data-bs-target="#signupModal"]').onclick = () =>
-        openModal("signup");
-
-      // Close modal when clicking overlay
-      document.querySelectorAll(".modal-overlay").forEach((overlay) => {
-        overlay.addEventListener("click", (e) => {
-          if (e.target === overlay) {
-            closeModal(overlay.id.replace("Overlay", ""));
-          }
-        });
-      });
-    </script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/Lang.js"></script>
+    
   </body>
 </html>
