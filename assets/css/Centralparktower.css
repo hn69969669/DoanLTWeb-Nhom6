@@ -51,6 +51,7 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 15px;
+  margin-top: aut;
 }
 .property-info div {
   display: flex;
@@ -175,5 +176,5 @@ p {
   margin: 15px;
 }
 .breadcrumb {
-  text-align: left;
+  /* text-align: left; */
 }

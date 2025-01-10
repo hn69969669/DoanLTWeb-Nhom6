@@ -43,14 +43,14 @@ a:hover {
     text-decoration: underline;
 }
 
-      .card-img-top {
+      /* .card-img-top {
         height: 250px;
         object-fit: cover;
         width: 100%;
       }
       .card {
         margin-bottom: 20px;
-      }
+      } */
 
 .content {
     width: 1110px;
@@ -259,12 +259,13 @@ a:hover {
     height: auto !important;
     object-fit: contain !important;
   }
-.fixed-header {
+  .fixed-header {
     background: #e6f0ff;
-    padding-top: 26px;
-    position: sticky;
-    top: -26px;
-    z-index: 1;
+    padding:5px 0;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
 }
 
 .hero-wrap {
