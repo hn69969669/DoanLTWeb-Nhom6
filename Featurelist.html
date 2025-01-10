@@ -9,6 +9,7 @@
       function myFunction() {
         loadScript("/components/header.html", "header");
         loadScript("/components/footer.html", "footer");
+        setTimeout(initializeModalHandlers, 100); // Give components time to load
       }
     </script>
     <link
@@ -415,73 +416,97 @@
     </div>
 
     <script>
-      function initializeProperties() {
-        const propertyCards = document.querySelectorAll(
-          "#propertyContainer .card"
-        );
-        const properties = Array.from(propertyCards).map((card) => {
-          const priceText = card.querySelector(".price").textContent;
-          const price = parseInt(priceText.replace(/\$|,/g, ""));
-          const title = card.querySelector(".card-title").textContent;
-          const location = card.querySelector(".card-text").textContent;
-          const image = card.querySelector("img").src;
+// Add this function to reinitialize Bootstrap components after header loads
+function initializeModalHandlers() {
+  const modals = ['signin', 'signup'].map(type => 
+    new bootstrap.Modal(document.getElementById(`${type}Modal`))
+  );
+  
+  document.querySelectorAll('[data-bs-toggle="modal"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-bs-target').replace('#', '');
+      const modal = modals.find(m => m._element.id === target);
+      if(modal) modal.show();
+    });
+  });
+}
 
-          return {
-            element: card.parentElement,
-            price: price,
-            title: title,
-            location: location,
-            image: image,
-          };
+// Update your myFunction to call this after loading components
+function myFunction() {
+  loadScript("/components/header.html", "header");
+  loadScript("/components/footer.html", "footer");
+  setTimeout(initializeModalHandlers, 100); // Give components time to load
+}
+</script>
+
+<script>
+  function initializeProperties() {
+    const propertyCards = document.querySelectorAll(
+      "#propertyContainer .card"
+    );
+    const properties = Array.from(propertyCards).map((card) => {
+      const priceText = card.querySelector(".price").textContent;
+      const price = parseInt(priceText.replace(/\$|,/g, ""));
+      const title = card.querySelector(".card-title").textContent;
+      const location = card.querySelector(".card-text").textContent;
+      const image = card.querySelector("img").src;
+
+      return {
+        element: card.parentElement,
+        price: price,
+        title: title,
+        location: location,
+        image: image,
+      };
+    });
+    return properties;
+  }
+
+  function applyFilter(filterName) {
+    const properties = initializeProperties();
+    document.getElementById("activeFilter").textContent = filterName;
+    document.getElementById("selectedFilters").classList.add("show");
+
+    const container = document.getElementById("propertyContainer");
+    const sortedProperties = [...properties];
+
+    if (filterName === "Price: High-Low") {
+      sortedProperties.sort((a, b) => b.price - a.price);
+    } else if (filterName === "Price: Low-High") {
+      sortedProperties.sort((a, b) => a.price - b.price);
+    }
+
+    // Reorder elements
+    sortedProperties.forEach((prop) => {
+      container.appendChild(prop.element);
+    });
+  }
+
+  function clearFilter() {
+    document.getElementById("activeFilter").textContent = "";
+    document.getElementById("selectedFilters").classList.remove("show");
+    // Reset to original order if needed
+    location.reload();
+  }
+
+  // Initial render
+  renderProperties(properties);
+
+  // Handle pagination clicks
+  document.querySelectorAll(".pagination .page-link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      document
+        .querySelectorAll(".pagination .page-item")
+        .forEach((item) => {
+          item.classList.remove("active");
         });
-        return properties;
+      if (e.target.parentElement.classList.contains("page-item")) {
+        e.target.parentElement.classList.add("active");
       }
-
-      function applyFilter(filterName) {
-        const properties = initializeProperties();
-        document.getElementById("activeFilter").textContent = filterName;
-        document.getElementById("selectedFilters").classList.add("show");
-
-        const container = document.getElementById("propertyContainer");
-        const sortedProperties = [...properties];
-
-        if (filterName === "Price: High-Low") {
-          sortedProperties.sort((a, b) => b.price - a.price);
-        } else if (filterName === "Price: Low-High") {
-          sortedProperties.sort((a, b) => a.price - b.price);
-        }
-
-        // Reorder elements
-        sortedProperties.forEach((prop) => {
-          container.appendChild(prop.element);
-        });
-      }
-
-      function clearFilter() {
-        document.getElementById("activeFilter").textContent = "";
-        document.getElementById("selectedFilters").classList.remove("show");
-        // Reset to original order if needed
-        location.reload();
-      }
-
-      // Initial render
-      renderProperties(properties);
-
-      // Handle pagination clicks
-      document.querySelectorAll(".pagination .page-link").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          document
-            .querySelectorAll(".pagination .page-item")
-            .forEach((item) => {
-              item.classList.remove("active");
-            });
-          if (e.target.parentElement.classList.contains("page-item")) {
-            e.target.parentElement.classList.add("active");
-          }
-        });
-      });
-    </script>
+    });
+  });
+</script>
     <section id="footer"></section>
     <script src="/js/Lang.js"></script>
     <script src="/js/LoadComponent.js"></script>

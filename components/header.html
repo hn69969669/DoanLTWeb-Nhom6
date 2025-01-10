@@ -113,4 +113,53 @@
       </ul>
     </div>
   </header>
+
+  <!-- Add modals directly in header -->
+  <!-- Sign In Modal -->
+  <div class="modal fade" id="signinModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" data-translate="signIn">Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="auth-form">
+            <input type="email" class="form-control mb-3" placeholder="Email" required />
+            <input type="password" class="form-control mb-3" placeholder="Password" required />
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="remember" />
+              <label class="form-check-label" for="remember" data-translate="rememberMe">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary" data-translate="signIn">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" data-translate="signUp">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="auth-form">
+            <input type="text" class="form-control mb-3" placeholder="Full Name" required />
+            <input type="email" class="form-control mb-3" placeholder="Email" required />
+            <input type="password" class="form-control mb-3" placeholder="Password" required />
+            <input type="password" class="form-control mb-3" placeholder="Confirm Password" required />
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="agree" required />
+              <label class="form-check-label" for="agree" data-translate="agreeToS">I agree to the Terms of Service</label>
+            </div>
+            <button type="submit" class="btn btn-primary" data-translate="signUp">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
