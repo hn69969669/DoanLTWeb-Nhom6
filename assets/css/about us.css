@@ -1,5 +1,5 @@
 .about-us {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   line-height: normal;
   width: 100%;
@@ -47,11 +47,8 @@
 .about-us-member {
   display: flex;
   justify-content: space-between;
-  gap: 150px;
-  width: 100%;
-  padding-top: 48px;
+  gap: 50px;
 }
-
 .about-us-member-1 {
   display: flex;
   width: 30%;
